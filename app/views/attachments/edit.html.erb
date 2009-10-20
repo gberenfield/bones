@@ -1,0 +1,10 @@
+<% title "Edit Attachments" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"attachment_menu" %>
+<% end %>
+
+<%= render :partial => 'form' %>
+
+<p>
+  <%= link_to "Show", @attachment %>
+</p>

@@ -1,0 +1,30 @@
+<% title "Users" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"user_menu" %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Login Count</th>
+    <th>Failed Login Count</th>
+    <th>Last Login At</th>
+    <th>Admin</th>
+    <th>Editor</th>
+  </tr>
+  <% for user in @users %>
+    <tr>
+      <td><%=h user.login %></td>
+      <td><%=h user.login_count %></td>
+      <td><%=h user.failed_login_count %></td>
+      <td><%=h user.last_login_at %></td>
+      <td><%=h user.admin %></td>
+      <td><%=h user.editor %></td>
+      <td><%= link_to "Show", user %></td>
+      <td><%= link_to "Edit", edit_user_path(user) %></td>
+      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New User", new_user_path %></p>

@@ -1,0 +1,10 @@
+<% title "Edit User" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"user_menu" %>
+<% end %>
+
+<%= render :partial => 'form' %>
+
+<p>
+  <%= link_to "Show", @user %>
+</p>

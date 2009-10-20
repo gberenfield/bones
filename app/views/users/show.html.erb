@@ -1,0 +1,54 @@
+<% title "User" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"user_menu" %>
+<% end %>
+
+<p>
+  <strong>Login:</strong>
+  <%=h @user.login %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @user.email %>
+</p>
+<p>
+  <strong>Login Count:</strong>
+  <%=h @user.login_count %>
+</p>
+<p>
+  <strong>Failed Login Count:</strong>
+  <%=h @user.failed_login_count %>
+</p>
+<p>
+  <strong>Last Request At:</strong>
+  <%=h @user.last_request_at %>
+</p>
+<p>
+  <strong>Current Login At:</strong>
+  <%=h @user.current_login_at %>
+</p>
+<p>
+  <strong>Last Login At:</strong>
+  <%=h @user.last_login_at %>
+</p>
+<p>
+  <strong>Current Login Ip:</strong>
+  <%=h @user.current_login_ip %>
+</p>
+<p>
+  <strong>Last Login Ip:</strong>
+  <%=h @user.last_login_ip %>
+</p>
+<p>
+  <strong>Admin:</strong>
+  <%=h @user.admin %>
+</p>
+<p>
+  <strong>Editor:</strong>
+  <%=h @user.editor %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_user_path(@user) %> |
+  <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %>
+</p>

@@ -1,0 +1,24 @@
+<% title "Attachments" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"attachment_menu" %>
+<% end %>
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Description</th>
+    <th>Attachment Date</th>
+  </tr>
+  <% for attachment in @attachments %>
+    <tr>
+      <td><%= link_to "File", attachment.attachment.url,:target=>"_blank" %></td>
+      <td><%=h attachment.description %></td>
+      <td><%=h attachment.attachment_date %></td>
+      <td><%= link_to "Show", attachment %></td>
+			<% if is_editor %>
+      	<td><%= link_to "Edit", edit_attachment_path(attachment) %></td>
+      	<td><%= link_to "Destroy", attachment, :confirm => 'Are you sure?', :method => :delete %></td>
+			<% end %>
+    </tr>
+  <% end %>
+</table>
+

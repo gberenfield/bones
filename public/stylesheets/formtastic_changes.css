@@ -1,0 +1,34 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset ol li p.inline-hints { color:#333; }
+
+--------------------------------------------------------------------------------------------------*/
+
+/*
+Ok not using for formtastic strictly but adding this override for jquery-lwrte so these editing areas
+line up with formtastic forms
+
+*/
+.rte-zone {
+-x-system-font:none;
+border:1px solid #999999;
+/*clear:both;*/
+clear: none;
+float: left; /*added*/
+font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0;
+padding:0;
+}
+jquery.r...255986473 (line 1)

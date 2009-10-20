@@ -1,0 +1,7 @@
+<% semantic_form_for @user do |form| %>
+	<% form.inputs do %>
+		<%= form.inputs :login, :email, :password, :password_confirmation %>
+		<%= form.inputs :editor,:admin %>
+		<%= form.buttons :commit %>
+	<% end %>
+<% end %>

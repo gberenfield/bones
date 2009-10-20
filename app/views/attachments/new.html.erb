@@ -1,0 +1,8 @@
+<% title "New Attachments" %>
+<% content_for :sidebar do %>
+	<%= render :partial=>"attachment_menu" %>
+<% end %>
+
+<%= render :partial => 'form' %>
+
+<p><%= link_to "Back to List", attachments_path %></p>

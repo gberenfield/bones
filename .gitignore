@@ -1,0 +1,17 @@
+log/*
+tmp/**/*
+**/hold/*
+.DS_Store
+doc/api
+doc/app
+config/database.yml
+*~
+*/*~
+*/**/*~
+rawdata
+script/pulldb
+doc/plugins
+db/old
+coverage
+public/attachments
+/attachments
