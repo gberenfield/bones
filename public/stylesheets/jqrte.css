@@ -1,0 +1,47 @@
+.icons{
+   display: block;
+   text-align:center;
+   margin-right: auto;
+   margin-left: auto;
+   width: 18px;
+   height: 20px;
+   background-image: url(../images/jqrte_icon.gif);
+   background-repeat: no-repeat;
+}
+
+.jqrte_active{
+   border:1px solid #0A246A;
+   background-color:#C2CBE0;
+}
+
+.jqrte_menu{
+   vertical-align:middle;
+   background-color: #D4D0C8;
+}
+
+.jqrte_menu td{
+   text-align:center;
+   margin-right: auto;
+   margin-left: auto;
+   width:22px;
+   height:22px;
+   border:#D4D0C8 1px solid;
+   cursor:pointer;
+}
+
+.jqrte_iframebody{
+   width:440px;
+   height:120px;
+   border:1px solid #000000;
+   background-color: #ffffff;
+}
+
+.jqrte_body{
+   width:450px;
+   border:solid 1px #D4D0C8;
+   background-color: #D4D0C8;
+}
+
+.jqrte_popup{
+   display:none;
+}

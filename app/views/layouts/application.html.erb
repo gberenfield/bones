@@ -20,11 +20,11 @@
 			<%= stylesheet_link_tag 'blueprint/ie',:media =>"screen, projection" %>
 		<![endif]-->
 		<%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.7.2.custom' %>
-		<%= stylesheet_link_tag 'jquery/jquery.rte','application','formtastic',
-		'formtastic_changes','colorbox',"jquery/jquery.auto-complete.css", 'mbExtruder' %>
+		<%= stylesheet_link_tag 'jquery.rte','application','formtastic',
+		'formtastic_changes','colorbox',"jquery.auto-complete.css", 'mbExtruder' %>
 
 		<!-- Below is for jqGrid 3.6.2-->
-		<%= stylesheet_link_tag 'ui.jqgrid.css' %> <!-- 'jquery/ui.multiselect.css' -->
+		<%= stylesheet_link_tag 'ui.jqgrid.css' %>
 		
     <%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
   </head>
