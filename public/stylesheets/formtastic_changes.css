@@ -31,4 +31,9 @@ line-height:normal;
 margin:0;
 padding:0;
 }
-jquery.r...255986473 (line 1)
+
+form.formtastic fieldset.inputs {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}

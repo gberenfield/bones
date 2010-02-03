@@ -1,12 +1,13 @@
-My Skeletal Rails App for Rails 2.3.4
+My Skeletal Rails App for Rails 2.3.5
 
 * authlogic (gem)
-* jQuery + jqgrid + jrails + lwrte (all manually installed/maintained)
+* jQuery + jqgrid + jrails + colorbox + lwrte (all manually installed/maintained)
 * blueprint css (plugin)
 * mislev will_paginate (gem)
 * nifty_scaffold (gem)         # do I really need/benefit from this?
 * formtastic (gem) # with one necessary override for lwrte!
 * paperclip (gem)
+
 
 Database starts off with Sqlite3 db   (this is for development, iirc!)
 

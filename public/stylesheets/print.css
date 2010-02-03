@@ -1,0 +1,66 @@
+@page {
+  size: landscape;
+  margin: 1.5cm;
+  border:none;
+}
+body { 
+	margin: 0;
+	padding: 0; 
+    color: black;
+  	font: 7pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+a {
+    color: black;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+     page-break-inside:avoid }
+h2 {
+	
+	margin: 0;
+	padding: 0; 
+	text-indent: 0px;
+	margin-left:5px;
+	margin-top:10px;
+  	font: bold 10pt "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+blockquote, table, pre { page-break-inside:avoid }
+ul, ol, dl  { page-break-before:avoid }
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: black black black black;
+	border-collapse: collapse;
+	background-color: white;
+	border: none;
+}
+table td {	
+	color: black;
+	border-width: 1px 1px 1px 1px;
+	padding: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+	border-color: black black black black;
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+  	text-align: center;
+}
+td.order_changed {
+	color: #5419d0;
+  	font-style: italic;
+  	font-weight: bold;
+}
+td.order_onhold {
+	color: #f30024;
+	font-weight: bold;
+}
+td.order_cancelled {
+	color: #f30024;
+	text-decoration: line-through;
+  	font-weight: bold;
+}
