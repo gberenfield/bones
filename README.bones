@@ -1,7 +1,12 @@
 My Skeletal Rails App for Rails 2.3.5
 
 * authlogic (gem)
-* jQuery + jqgrid + jrails + colorbox + lwrte (all manually installed/maintained)
+* jQuery + plugins  (all manually installed/maintained)
+	* jqgrid 3.6.2
+	* jrails 
+	* colorbox 1.3.6
+	* printElement 0.9
+	* lwrte 
 * blueprint css (plugin)
 * mislev will_paginate (gem)
 * nifty_scaffold (gem)         # do I really need/benefit from this?
