@@ -31,8 +31,24 @@ a {
   padding: 12px 10px 1px;
   border: 1px solid black;
 }
-#sidebar_container {
-  background-color: rgba(226,204,164,0.75);
+
+.sidebar_container a {
+  text-decoration: none;
+  background-color: #ffae49;
+  width: 120px;
+  color: black;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.sidebar_container a:hover {
+  color: white;  
+}
+
+.sidebar_container {
+  background-color: #9AACBF;
   padding: 10px;
   margin-right: 10px;
 }
