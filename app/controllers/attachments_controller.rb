@@ -106,6 +106,17 @@ class AttachmentsController < ApplicationController
   end
   
   def updategrid
+    params.delete(:action)
+    params.delete(:controller)
+    params.delete(:oper)
+    @attachment = Attachment.find(params[:rid])
+
+    params.delete(:id)
+    params.delete(:rid)
+    
+    if @attachment.update_attributes(params) then
+      render :layout=>false
+    end
     
   end
   

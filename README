@@ -2,7 +2,7 @@ My Skeletal Rails App for Rails 2.3.5
 
 * authlogic (gem)
 * jQuery 1.3.2 + plugins  (all manually installed/maintained)
-	* jqgrid 3.6.3
+	* jqgrid 3.6.4
 	* jrails 
 	* colorbox 1.3.6
 	* printElement 0.9
