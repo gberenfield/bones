@@ -1,106 +1,135 @@
 body {
-  background-color: #b4cbe2;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 12px;
+	background-color: #b4cbe2;
+	font-family: Verdana, Helvetica, Arial;
+	font-size: 12px;
 }
 
 a img {
-  border: none;
+	border: none;
 }
 
 a {
-  color: #0000FF;
+	color: #0000FF;
 }
 
 .clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.padabit {
+	padding: 10px;
 }
 
 .container {
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
-}
-#header_container {
-  margin-bottom: 20px;
-  padding: 12px 10px 1px;
-  border: 1px solid black;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #FFF;
+	border: solid 1px black;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px 30px;
 }
 
-.sidebar_container a {
-  text-decoration: none;
-  background-color: #ffae49;
-  width: 120px;
-  color: black;
-  display: inline-block;
-  padding: 3px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.sidebar_container a:hover {
-  color: white;  
+#header_container {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 12px 10px 1px;
+	border: 1px solid black;
 }
 
 .sidebar_container {
-  background-color: #9AACBF;
-  padding: 10px;
-  margin-right: 10px;
+	background-color: rgba(226,204,164,0.75);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #000;
+	padding: 0px;
+	/*  border: 2px solid #b4cbe2;*/
+	/*padding: 10px 10px 20px;*/
 }
+.sidebar_container a {
+	text-decoration: none;
+	background-color: orange;
+	width: 120px;
+	color: black;
+	display: inline-block;
+	padding: 3px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.sidebar_container a:hover {
+	color: white;  
+}
+
 #flash_notice, #flash_error {
-  padding: 5px 8px;
-  margin: 10px 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	padding: 5px 8px;
+	margin: 10px 0;
 }
 
 #flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	background-color: #CFC;
+	border: solid 1px #6C6;
 }
 
 #flash_error {
-  background-color: #FCC;
-  border: solid 1px #C66;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	background-color: #FCC;
+	border: solid 1px #C66;
 }
 
 .fieldWithErrors {
-  display: inline;
+	display: inline;
 }
 
 #errorExplanation {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;			
+	width: 400px;
+	border: 2px solid #CF0000;
+	padding: 0px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
 }
 
 #errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: 0;
+	background-color: #c00;
+	color: #fff;
 }
 
 #errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 8px;
+	color: #333;
+	margin-bottom: 0;
+	padding: 8px;
 }
 
 #errorExplanation ul {
-  margin: 2px 24px;
+	margin: 2px 24px;
 }
 
 #errorExplanation ul li {
-  font-size: 12px;
-  list-style: disc;
+	font-size: 12px;
+	list-style: disc;
+}
+
+
+/*My jquery-ui overrides for the jquery-ui hot-sneaks theme*/
+.ui-state-default, .ui-widget-content .ui-state-default {
+	border: 1px solid #92a9c0; background: #b4cbe2;
+	font-weight: bold; color: #333333; 
 }

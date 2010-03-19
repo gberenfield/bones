@@ -4,30 +4,21 @@
 <head>
 	<title><%= h(yield(:title) || "Untitled") %></title>
 
-	<%= javascript_include_tag 'jquery-1.3.2',"jquery-ui-1.7.2.custom.min","jquery.rte",
-	"jquery.rte.tb","jquery.ocupload-1.1.4","jquery.colorbox-1.3.6.min" %> <!-- , :cache=>"scripts" %> -->
+	<%= javascript_include_tag 'jquery-1.4.2.min',"jquery-ui-1.8rc3.custom.min","jquery.rte",
+	"jquery.rte.tb","jquery.ocupload-1.1.4","jquery.colorbox-1.3.6.min", 
+	"jrails",
+	"grid.locale-en.js", "jquery.jqGrid.min", "jquery.metadata.js","jquery.auto-complete.min.js",
+	"jquery.hoverIntent.min.js","jquery.metadata.js","jquery.mb.flipText.min.js","mbExtruder.min.js",
+	#"jquery.printElement.min.js","jquery.curvycorners.min",
+	"application.js", :cache=>"scripts" %> 
 
-	<%= javascript_include_tag "jrails" %>
-
-	<!-- Below is for jqGrid 3.6.3  -->
-	<%= javascript_include_tag "grid.locale-en.js", "jquery.jqGrid.min.js" %>
-
-	<%= javascript_include_tag "jquery.metadata.js","jquery.auto-complete.min.js" %>
-	<%= javascript_include_tag "jquery.hoverIntent.min.js","jquery.metadata.js","jquery.mb.flipText.min.js",
-	"mbExtruder.min.js","jquery.printElement.min.js","jquery.curvycorners.min"%>
-	<%= javascript_include_tag "application.js" %>
-
-	<%= stylesheet_link_tag 'blueprint/screen',:media =>"screen, projection" %>
-	<%= stylesheet_link_tag 'blueprint/print',:media =>"print" %>
-	<!--[if lt IE 8]>		
-	<%= stylesheet_link_tag 'blueprint/ie',:media =>"screen, projection" %>
-	<![endif]-->
-	<%= stylesheet_link_tag 'hot-sneaks/jquery-ui-1.7.2.custom' %>
-	<%= stylesheet_link_tag 'jquery.rte','application','formtastic',
-	'formtastic_changes','colorbox',"jquery.auto-complete.css", 'mbExtruder' %>
-
-	<!-- Below is for jqGrid 3.6.3G-->
-	<%= stylesheet_link_tag 'ui.jqgrid.css' %>
+	<%= stylesheet_link_tag 'blueprint/screen',  #blueprint stylesheet
+	# jQuery-UI stylesheet
+	'jquery-ui-1.8rc3.custom',
+	'jquery.rte','application','formtastic',
+	'formtastic_changes','colorbox',"jquery.auto-complete.css", 'mbExtruder',
+	# Below is for jqGrid 3.6.4
+	'ui.jqgrid.css', :cache=>"styles" %> 
 
 	<%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
 </head>
@@ -45,7 +36,9 @@
 			</div>
 		</div>
 		<div class="span-24 box sidebar_container">
-			<%= yield :sidebar %>					
+			<div class="padabit">
+				<%= yield :sidebar %>					
+			</div>
 		</div>
 		<div class="span-24 last">
 			<div id="main_container">	<!-- defined in application.css -->

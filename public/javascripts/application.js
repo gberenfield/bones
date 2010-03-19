@@ -2,10 +2,6 @@ var lastsel;
 
 $(document).ready(function(){
 
-	$("#header_container").corner();
-	$(".sidebar_container a").corner();
-	$(".sidebar_container").corner();
-
 	$("#thegrid").jqGrid({
 		sortable: true, 
 		url:'/attachments/grid',
