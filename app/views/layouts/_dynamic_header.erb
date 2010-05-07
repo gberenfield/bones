@@ -1,0 +1,12 @@
+<div class="span-24 last">
+		<div id="header_container">  <!-- for header backgrounds or borders, etc. in application.css -->
+			<%- flash.each do |name, msg| -%>
+				<%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<%- end -%>
+			<%- if show_title? -%>
+				<h2><%=h yield(:title) %></h2>
+			<%- end -%>			
+			<!-- <input type='hidden' id='amiana' value='<%#= is_admin || false %>'> <!-- am I an editor? setting it here for jQuery parsing -->
+			<!-- <input type='hidden' id='marole' value='<%#= user_role || 'none' %>'> <!-- wots ma role  -->  
+		</div>
+</div>

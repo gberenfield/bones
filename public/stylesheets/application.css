@@ -4,6 +4,12 @@ body {
 	font-size: 12px;
 }
 
+html, body { /* force vertical scrollbar always - fix annoying page jump from when it appears/disappears*/
+	height: 100%;
+	margin: 0 0 1px;
+	padding: 0;
+}
+
 a img {
 	border: none;
 }
@@ -17,8 +23,77 @@ a {
 	height: 0;
 	overflow: hidden;
 }
-.padabit {
-	padding: 10px;
+.myajaxbutton {
+	width: 100px;
+	color: black;
+	background-color: #ead9bb;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font: 11px "Lucida Grande", Lucida, Verdana, sans-serif;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+.loginname {
+	text-decoration: none;
+	width: 120px;
+	color: black;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-variant: small-caps;
+	display: inline-block;
+	padding: 1px;
+	margin: 2px;
+}
+a.nicerbutton {
+   	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	color: black;
+	width: 105px;
+	border:0.3em solid #5D463D;
+	padding: 0.7em 1em;
+	margin-left: 9.5em;
+	background-color: #ecb269;
+  	margin-top: 1em;
+  	  	margin-bottom: 2em;
+    text-decoration: none;
+    font: bold 1.1em Tahoma, arial, verdana, courier;
+    display: block;
+}
+a.myajaxbutton {
+	width: 84px;
+	height: 16px;
+	white-space: pre;
+	-moz-box-sizing: content-box;
+	color: black;
+	background-color: #ead9bb;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-decoration: none;
+	padding-right: 6px;
+	padding-left: 6px;
+	border: 2px outset #F0F0F0;
+}
+.myajaxbuttonsmall {
+	color: black;
+	border: none;
+	background-color: #ead9bb;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.orderchanged {
+	color: #3e821a;
+	font-style: italic;
+}
+
+.orderonhold{
+	color: red;
+
+}
+.ordercancelled {
+	color: maroon;
+	text-decoration: line-through;
 }
 
 .container {
@@ -31,16 +106,69 @@ a {
 	margin-left: auto;
 	padding: 10px 30px;
 }
-
-#header_container {
+.myfilterbar {
+	-webkit-box-shadow: 2px 2px 4px  ;
+	-moz-box-shadow: 2px 2px 4px ;
+	box-shadow: 2px 2px 4px ;	
+	background-color: #b4cbe2;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	margin-bottom: 20px;
-	padding: 12px 10px 1px;
-	border: 1px solid black;
+	border: 1px solid #000;
+}
+.filterbarinterior {
+	padding: 12px;
+}
+.plantacl {
+	float: right;
+}
+#AutoCompleteFocus {
+	background-color: #f6f6f6;
+	border: 2px solid #c1c1c1;
+	position: fixed;
+	top: 80px;
+	left: 800px;
+	/*margin: 40px 0 0 700px;*/
+	padding: 15px;
+	width: 300px;
+	height: 100px;
+	overflow: auto;
 }
 
+#AutoCompleteFocus div {
+	margin-bottom: 20px;
+}
+
+#AutoCompleteFocus pre {
+	display: none;
+}
+
+#header_container {
+	padding: 0px 0 1px;
+	clear: both;
+	width: 100%;
+}
+
+.paddown {
+    padding-top: 12px;
+	padding-bottom: 12px;    
+}
+.padabit {
+    padding: 12px;
+}
+
+#containsgrid{
+   	-webkit-box-shadow: 2px 2px 4px  ;
+	-moz-box-shadow: 2px 2px 4px ;
+	box-shadow: 2px 2px 4px ;
+    clear: both;
+    margin-top: 10px;
+    display: block;
+    float: none;
+}
 .sidebar_container {
+	-webkit-box-shadow: 2px 2px 4px  ;
+	-moz-box-shadow: 2px 2px 4px ;
+	box-shadow: 2px 2px 4px ;	
 	background-color: rgba(226,204,164,0.75);
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -61,28 +189,25 @@ a {
 	font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+    text-align: center;
 }
 .sidebar_container a:hover {
 	color: white;  
 }
-
 #flash_notice, #flash_error {
 	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
-	padding: 5px 8px;
-	margin: 10px 0;
+	-webkit-border-radius: 5px;
+	/*margin: 10px 0;*/
+    padding: 3px 8px;
+    font: normal bold 0.8em "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 #flash_notice {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
 	background-color: #CFC;
 	border: solid 1px #6C6;
 }
 
 #flash_error {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
 	background-color: #FCC;
 	border: solid 1px #C66;
 }
@@ -93,7 +218,7 @@ a {
 
 #errorExplanation {
 	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;			
+	-webkit-border-radius: 8px;				
 	width: 400px;
 	border: 2px solid #CF0000;
 	padding: 0px;
@@ -126,8 +251,6 @@ a {
 	font-size: 12px;
 	list-style: disc;
 }
-
-
 /*My jquery-ui overrides for the jquery-ui hot-sneaks theme*/
 .ui-state-default, .ui-widget-content .ui-state-default {
 	border: 1px solid #92a9c0; background: #b4cbe2;

@@ -6,5 +6,12 @@ module ApplicationHelper
   
   def is_admin
     return (current_user.admin)
+  end
+  
+  def user_role
+    if (current_user)
+      # return (current_user.role)
+    end
   end  
+  
 end

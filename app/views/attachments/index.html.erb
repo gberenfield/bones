@@ -1,11 +1,38 @@
+<% @hide_dynamic=true %>
+<% javascript "header" %>
 <% title "Attachments" %>
-<% content_for :sidebar do %>
-	<%= render :partial=>"attachment_menu" %>
-<% end %>
 
-<table id="thegrid"></table>
-<div id="pager"></div>
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"attachment_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+	<table id="thegrid"></table>
+	<div id="pager"></div>
+</div>
 
+<script>
+	$(".container").prepend('<%= escape_javascript render("layouts/dynamic_header")%>');
+
+	BONES.userights();
+	// function buildorderbuttons(){ alert("bilderbuttonsfromindex"); }
+	var cnames=['rid','file_name','description','comments'];
+	var cmodel=[
+		{name:'rid',index:'id', width:1,hidden:true,hidedlg:true,sortable:false,editable:true},
+		{name:'attachment_file_name', index:'attachment_file_name', width:100,sortable:true},
+		{name:'description', index:'description', width:160, align:'left',sortable:true}, 
+		{name:'comments', index:'comments', editable:true,sorttype:'text',width:100}
+		];
+	
+	BONES.buildGrid("#thegrid",cnames,cmodel,{
+		caption:'Attachments',
+		sortname:"attachment_file_name",
+		sortdir:"asc"
+	});
+
+</script>
 <style>
 	/*This simple little class change allows jqGrid 3.6.2 to wrap text cells!*/
 	.ui-jqgrid tr.jqgrow td { white-space: normal; }

@@ -14,26 +14,102 @@ Ok not using for formtastic strictly but adding this override for jquery-lwrte s
 line up with formtastic forms
 
 */
-.rte-zone {
--x-system-font:none;
-border:1px solid #999999;
-/*clear:both;*/
-clear: none;
-float: left; /*added*/
-font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;
-font-size:10px;
-font-size-adjust:none;
-font-stretch:normal;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:normal;
-margin:0;
-padding:0;
+.rte-zone,.wysiwyg {
+	border: 0.3em solid #5D463D;
+	font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;
+	font-size:1em;
+	width: 100px;
+	padding: 0.7em 0.6em 0.6 em 1em;
+	-moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+    display: inline-block;
+}
+form.formtastic  fieldset ol li div.rte-zone div.rte-toolbar ul li select {
+	width: 80px;
+	font-size: 1em;
+	border: 1px solid black;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+
+}
+form.formtastic li {
+    list-style-type: none;
+    margin: 0.7em;
+}
+form.formtastic fieldset legend {
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	width: 100%;
+    color: #ecb269;
+    background-color: #626262;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+form.formtastic fieldset legend span {
+    padding-left: 1em;
+}
+form.formtastic fieldset ol li label,
+form.formtastic li label {
+    list-style-type: none;
+	float:left;
+	font-size: 1.2em;
+	width:7em;
+  	text-align: right;
+	padding-right: 1em;
+	padding-top: 0.2em;
+    list-style-image: none;
+}
+form.formtastic fieldset ol li.string input,
+form.formtastic fieldset ol li.numeric input,
+form.formtastic li.string input,
+form.formtastic fieldset ol li select,
+form.formtastic li.file input,
+form.formtastic fieldset ol li.password input {
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	background: #5480bd;
+	font-size:1.4em;
+	color:#FFF;
+	font-family:Tahoma, arial, verdana, courier;
+	width:20em;
+	height:1.9em;
+	padding: 0.7em 0.6em 0.6 em 1em;
+	border: 0.2em solid #5D463D;
+}
+form.formtastic fieldset ol li select {
+    width: 20.4em;
+}
+form.formtastic fieldset ol li p.inline-hints {
+	padding-left:9.8em;
+    font-style: italic;
+    text-align: left;
+    margin: 0px;
 }
 
-form.formtastic fieldset.inputs {
-  border-style: solid;
-  border-width: 1px;
-  padding: 10px;
+form.formtastic fieldset ol li.boolean label{
+	padding-left:8em;
+	padding-top: 0.2em;
+	text-align: left;
+	width:20em;
+}
+form.formtastic fieldset ol li.boolean label input {
+	margin-top:  0em;
+	margin-bottom:  1em;
+	padding-top: 0.2em;
+}
+form.formtastic fieldset.buttons {
+	padding-left: 5.2em;
+}
+form.formtastic li.commit input
+ {
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	color: black;
+	font-size:1.1em;
+	font-family:Tahoma, arial, verdana, courier;
+	border:0.3em solid #5D463D;
+	padding: 0.7em 1em;
+	margin-left: 8.6em;
+	background-color: #ecb269;
+  	margin-top: 1em;
 }
