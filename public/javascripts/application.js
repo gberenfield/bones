@@ -64,35 +64,23 @@ var BONES = {
 			jQuery('#thegrid').jqGrid('editRow',id,true,BONES.pickdates,'','','',BONES.updated_ok);
 		}			
 		var $buildbuttons = options["buildbuttons"] || function(id){
-			$(grid).jqGrid('navButtonAdd',pager,{ 
+			$(grid).jqGrid('navButtonAdd','#pager',{ 
 				caption: "Columns", title: "Reorder Columns", 
 				onClickButton : function (){ 
 					$(grid).jqGrid('columnChooser'); 
-				} 
+				}
 			});
-			$(grid).jqGrid('navButtonAdd',pager,{
-				caption:"Toggle",title:"Toggle Search Toolbar", 
-				buttonicon :'ui-icon-pin-s', 
-				onClickButton:function(){ $(grid)[0].toggleToolbar() }
+
+			$(grid).jqGrid('navButtonAdd',"#pager",{caption:"Toggle",
+				title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s', 
+				onClickButton:function(){ $(grid)[0].toggleToolbar() } 
 			});
-			$(grid).jqGrid('navButtonAdd',pager,{caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh', 
-				onClickButton:function(){ $(grid)[0].clearToolbar() } });
-			if (amiana) {
-							$(grid).jqGrid('navButtonAdd',pager,{caption:"Edit",title:"Edit Selected Attachment",buttonicon :'ui-icon-pencil', 
-							onClickButton:function(){
-								// orderid=jQuery(grid).getRowData(lastsel).rid;
-								$("#main_container").load("/attachments/edit/"+lastsel);
-								// $.fn.colorbox({href:"/orders/edit/"+lastsel+"?cb=1",open:true,width:850,height:700,iframe:true});
-								return false
-							}});
-						}
-						$(grid).jqGrid('navButtonAdd',pager,{caption:"Show",title:"Show Selected Attachment",buttonicon :'ui-icon-arrow-4', 
-						onClickButton:function(){ 
-							// orderid=jQuery(grid).getRowData(lastsel).rid;
-							$.fn.colorbox({href:"/attachments/show/"+lastsel+"?cb=1",open:true});
-							return false
-						}});
-			
+
+			$(grid).jqGrid('navButtonAdd',"#pager",{
+				caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh', 
+				onClickButton:function(){ $(grid)[0].clearToolbar() } 
+			});
+
 			$(grid).jqGrid('gridResize',{minWidth:350,maxWidth:1000,minHeight:100, maxHeight:1024});	
 			$(grid).jqGrid('filterToolbar');
 		}

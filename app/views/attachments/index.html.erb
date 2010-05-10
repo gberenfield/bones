@@ -16,6 +16,28 @@
 <script>
 	$(".container").prepend('<%= escape_javascript render("layouts/dynamic_header")%>');
 
+	function babafoo(){
+		$("#thegrid").jqGrid('navButtonAdd','#pager',{ 
+			caption: "Columns", title: "Reorder Columns", 
+			onClickButton : function (){ 
+				$("#thegrid").jqGrid('columnChooser'); 
+			}
+		});
+		
+		$("#thegrid").jqGrid('navButtonAdd',"#pager",{caption:"Toggle",
+			title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s', 
+			onClickButton:function(){ $("#thegrid")[0].toggleToolbar() } 
+		});
+
+		$("#thegrid").jqGrid('navButtonAdd',"#pager",{
+			caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh', 
+			onClickButton:function(){ $("#thegrid")[0].clearToolbar() } 
+		});
+
+		$("#thegrid").jqGrid('gridResize',{minWidth:350,maxWidth:1000,minHeight:100, maxHeight:1024});	
+		$("#thegrid").jqGrid('filterToolbar');
+		
+	}
 	BONES.userights();
 	// function buildorderbuttons(){ alert("bilderbuttonsfromindex"); }
 	var cnames=['rid','file_name','description','comments'];
@@ -29,7 +51,8 @@
 	BONES.buildGrid("#thegrid",cnames,cmodel,{
 		caption:'Attachments',
 		sortname:"attachment_file_name",
-		sortdir:"asc"
+		sortdir:"asc",
+		buildbuttons:babafoo
 	});
 
 </script>
