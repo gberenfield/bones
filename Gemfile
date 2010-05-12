@@ -17,7 +17,7 @@ gem 'capistrano'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git', :ref => 'rails3'
 #gem "paperclip"  # attachments
 gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => "rails3" 
-gem "formtastic"
+gem 'formtastic', :git => "git://github.com/justinfrench/formtastic.git", :branch => 'rails3'
 gem 'will_paginate', '3.0.pre'
 
 #gem "ruby-debug"
