@@ -18,7 +18,7 @@ gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git', :ref => 'r
 #gem "paperclip"  # attachments
 gem "authlogic", :git => 'git://github.com/odorcicd/authlogic.git', :branch => "rails3" 
 gem "formtastic"
-gem 'will_paginate'
+gem 'will_paginate', '3.0.pre'
 
 #gem "ruby-debug"
 group :test do
