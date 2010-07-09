@@ -19,8 +19,8 @@ gem 'will_paginate', '3.0.pre'
 
 
 group :development do
-  gem "linecache19"
-  gem "ruby-debug19"
+#  gem "linecache19"
+  gem "ruby-debug"
   gem 'capistrano'
 end 
 
@@ -36,6 +36,11 @@ end
 # end
 
 group :test do
+  # trying to add and get working
+  gem "autotest-rails"
+  gem "autotest"  
+  gem "rcov"
+  
   gem "rspec-rails",    ">=2.0.0.beta.12"
   gem "cucumber-rails", ">=0.3.2"
   gem "capybara",       ">=0.3.8"
@@ -45,8 +50,7 @@ group :test do
   gem "database_cleaner"
   gem 'autotest'
   gem "spork"
-  gem "rspec"
-  gem "rspec-rails"
+  gem "rspec",        ">=2.0.0.beta.12"
   gem "machinist"
   gem "faker"
   gem "forgery"
