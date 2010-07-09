@@ -1,9 +1,25 @@
 My Skeletal Rails App for Rails 3
 
+
+******************************************************************************
+**																																					**
+**		I have created an "AttachmentController/Model/Views" as an example		**
+**		of  how to  use everything  in  practice (basic  CRUD stuff). Just		**
+**		globally find+remove  all "Attachment" files and references, or you		**
+**		may like having some ready-baked attachment handling!									**
+**																																					**
+******************************************************************************
+
+RUBY
+====
+
 * developed under ruby 1.9.1p378 (2010-01-10 revision 26273)
 * 2010-07-09 Finding too many exotic problems and incompatibilities with ruby 1.9.x (1 or 2-preview3 or 2-rc1) with gems breaking/segfaults running back to ruby 1.8.7
 * 2010-07-09 ruby 1.8.7 (2010-06-23 patchlevel 299) 
 
+
+GEMS
+====
 
 * authlogic (gem)
 * jQuery 1.4.2 + plugins  (all manually installed/maintained)
@@ -14,23 +30,6 @@ My Skeletal Rails App for Rails 3
 * will_paginate (gem)
 * formtastic (gem) # with one necessary override for lwrte!
 * paperclip (gem)
-
-
-Database starts off with Sqlite3 db   (this is for development, iirc!)
-
-1. sudo bundle install --relock"  # to install any missing gems used above!
-2. rake db:migrate
-2. rake db:seed (loads seed 'admin' account with password 'pass')
-
-
-******************************************************************************
-**																																					**
-**		I have created an "AttachmentController/Model/Views" as an example		**
-**		of  how to  use everything  in  practice (basic  CRUD stuff). Just		**
-**		globally find+remove  all "Attachment" files and references, or you		**
-**		may like having some ready-baked attachment handling!									**
-**																																					**
-******************************************************************************
 
 
 GIT / GitHUB
@@ -45,10 +44,23 @@ git add README
 git commit -m 'first commit'
 git remote add origin git@github.com:gberenfield/<app_name>.git
 git push origin master
+
+
+DATABASE
+========
+
+Database starts off with Sqlite3 db   (this is for development, iirc!)
+
+1. sudo bundle install --relock  # to install any missing gems used above!
+2. rake db:migrate
+2. rake db:seed (loads seed 'admin' account with password 'pass')
+
       
+
 TESTING NOTES
 =============
 * for Autotest to work nicely with rspec2 + Bundler, run it with "bundle exec autotest"
+
 
 DEPLOYMENT
 ==========
