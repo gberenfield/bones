@@ -1,0 +1,249 @@
+--- 
+hash: 4b91fd92eab6ab0f84d7c91aa27fa93c0b69780d
+sources: 
+- Git: 
+    git: git://github.com/justinfrench/formtastic.git
+    branch: rails3
+    uri: git://github.com/justinfrench/formtastic.git
+    ref: f763772f1287760b160b2a971be8d67e6553a9fe
+- Rubygems: 
+    uri: http://gemcutter.org
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- activesupport: 
+    version: 3.0.0.beta4
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.4.1
+- activemodel: 
+    version: 3.0.0.beta4
+- erubis: 
+    version: 2.6.6
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.6
+- rack-test: 
+    version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
+- actionpack: 
+    version: 3.0.0.beta4
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.8
+- mail: 
+    version: 2.2.5
+- actionmailer: 
+    version: 3.0.0.beta4
+- arel: 
+    version: 0.4.0
+- activerecord: 
+    version: 3.0.0.beta4
+- activeresource: 
+    version: 3.0.0.beta4
+- archive-tar-minitar: 
+    version: 0.5.2
+- authlogic: 
+    version: 2.1.5
+- autotest: 
+    version: 4.3.2
+- bundler: 
+    version: 0.9.26
+- highline: 
+    version: 1.5.2
+- net-ssh: 
+    version: 2.0.23
+- net-scp: 
+    version: 1.0.2
+- net-sftp: 
+    version: 2.0.4
+- net-ssh-gateway: 
+    version: 1.0.1
+- capistrano: 
+    version: 2.5.19
+- culerity: 
+    version: 0.2.10
+- nokogiri: 
+    version: 1.4.2
+- ffi: 
+    version: 0.6.3
+- json_pure: 
+    version: 1.4.3
+- selenium-webdriver: 
+    version: 0.0.24
+- capybara: 
+    version: 0.3.9
+- columnize: 
+    version: 0.3.1
+- configuration: 
+    version: 1.1.0
+- diff-lcs: 
+    version: 1.1.2
+- trollop: 
+    version: 1.16.2
+- gherkin: 
+    version: 2.0.2
+- term-ansicolor: 
+    version: 1.0.5
+- cucumber: 
+    version: 0.8.3
+- cucumber-rails: 
+    version: 0.3.2
+- database_cleaner: 
+    version: 0.5.2
+- faker: 
+    version: 0.3.1
+- forgery: 
+    version: 0.3.4
+- formtastic: 
+    version: 1.0.0.beta
+    source: 0
+- rspec-core: 
+    version: 2.0.0.beta.16
+- rspec-expectations: 
+    version: 2.0.0.beta.16
+- rspec-mocks: 
+    version: 2.0.0.beta.16
+- rspec: 
+    version: 2.0.0.beta.16
+- selenium-client: 
+    version: 1.2.18
+- selenium-rc: 
+    version: 2.2.4
+- jasmine: 
+    version: 0.11.1.0
+- launchy: 
+    version: 0.3.5
+- ruby_core_source: 
+    version: 0.1.4
+- linecache19: 
+    version: 0.5.11
+- machinist: 
+    version: 1.0.6
+- mocha: 
+    version: 0.9.8
+- paperclip: 
+    version: 2.3.3
+- thor: 
+    version: 0.13.7
+- railties: 
+    version: 3.0.0.beta4
+- rails: 
+    version: 3.0.0.beta4
+- webrat: 
+    version: 0.7.1
+- rspec-rails: 
+    version: 2.0.0.beta.16
+- ruby-debug-base19: 
+    version: 0.11.23
+- ruby-debug19: 
+    version: 0.11.6
+- spork: 
+    version: 0.8.4
+- sqlite3-ruby: 
+    version: 1.3.0
+- will_paginate: 
+    version: 3.0.pre
+dependencies: 
+  rails: 
+    version: = 3.0.0.beta4
+    group: 
+    - :default
+  sqlite3-ruby: 
+    version: ">= 0"
+    group: 
+    - :default
+    require: 
+    - sqlite3
+  capistrano: 
+    version: ">= 0"
+    group: 
+    - :development
+  paperclip: 
+    version: ">= 2.3.3"
+    group: 
+    - :default
+  authlogic: 
+    version: ">= 2.1.5"
+    group: 
+    - :default
+  formtastic: 
+    version: ">= 0"
+    group: 
+    - :default
+  will_paginate: 
+    version: = 3.0.pre
+    group: 
+    - :default
+  linecache19: 
+    version: ">= 0"
+    group: 
+    - :development
+  ruby-debug19: 
+    version: ">= 0"
+    group: 
+    - :development
+  rspec-rails: 
+    version: ">= 0"
+    group: 
+    - :test
+  cucumber-rails: 
+    version: ">= 0.3.2"
+    group: 
+    - :test
+  capybara: 
+    version: ">= 0.3.8"
+    group: 
+    - :test
+  launchy: 
+    version: ">= 0"
+    group: 
+    - :test
+  jasmine: 
+    version: ">= 0"
+    group: 
+    - :test
+  cucumber: 
+    version: ">= 0"
+    group: 
+    - :test
+  database_cleaner: 
+    version: ">= 0"
+    group: 
+    - :test
+  autotest: 
+    version: ">= 0"
+    group: 
+    - :test
+  spork: 
+    version: ">= 0"
+    group: 
+    - :test
+  rspec: 
+    version: ">= 0"
+    group: 
+    - :test
+  machinist: 
+    version: ">= 0"
+    group: 
+    - :test
+  faker: 
+    version: ">= 0"
+    group: 
+    - :test
+  forgery: 
+    version: ">= 0"
+    group: 
+    - :test
+  mocha: 
+    version: ">= 0"
+    group: 
+    - :test

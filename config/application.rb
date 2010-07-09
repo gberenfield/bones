@@ -36,6 +36,9 @@ module Bones
     #   g.template_engine :erb
     #   g.test_framework  :test_unit, :fixture => true
     # end
+    config.generators do |g|
+      g.test_framework :rspec
+    end
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
