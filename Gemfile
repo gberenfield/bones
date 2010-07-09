@@ -40,6 +40,7 @@ group :test do
   gem "autotest-rails"
   gem "autotest"  
   gem "rcov"
+  gem "ruby-debug"
   
   gem "rspec-rails",    ">=2.0.0.beta.12"
   gem "cucumber-rails", ">=0.3.2"
