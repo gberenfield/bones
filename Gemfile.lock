@@ -16,10 +16,6 @@ dependencies:
     group: 
     - :default
     version: = 3.0.0.beta4
-  authlogic: 
-    group: 
-    - :default
-    version: ">= 2.1.5"
   sqlite3-ruby: 
     group: 
     - :default
@@ -66,6 +62,10 @@ dependencies:
     group: 
     - :default
     version: = 3.0.pre
+  devise: 
+    group: 
+    - :default
+    version: ">= 1.1rc2"
   paperclip: 
     group: 
     - :default
@@ -141,12 +141,12 @@ specs:
     version: 3.0.0.beta4
 - activeresource: 
     version: 3.0.0.beta4
-- authlogic: 
-    version: 2.1.5
 - autotest: 
     version: 4.3.2
 - autotest-rails: 
     version: 4.1.0
+- bcrypt-ruby: 
+    version: 2.1.2
 - bundler: 
     version: 0.9.26
 - highline: 
@@ -191,6 +191,10 @@ specs:
     version: 0.3.2
 - database_cleaner: 
     version: 0.5.2
+- warden: 
+    version: 0.10.7
+- devise: 
+    version: 1.1.rc2
 - faker: 
     version: 0.3.1
 - forgery: 
@@ -244,7 +248,7 @@ specs:
     version: 1.3.0
 - will_paginate: 
     version: 3.0.pre
-hash: 36545128e6fac6c8581786b1033de4c08e3cf238
+hash: fe5c359c2bbd21c3305c1943beddb380dd292687
 sources: 
 - Git: 
     uri: git://github.com/justinfrench/formtastic.git

@@ -13,7 +13,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # Deploy with Capistrano
 gem 'capistrano'
 gem "paperclip",">=2.3.3"  # attachments
-gem 'authlogic',">=2.1.5"
+#gem 'authlogic',">=2.1.5"
+gem "devise", ">=1.1rc2"
 gem 'formtastic', :git => "git://github.com/justinfrench/formtastic.git", :branch => 'rails3'
 gem 'will_paginate', '3.0.pre'
 
