@@ -1,6 +1,6 @@
 class AttachmentsController < ApplicationController
   
-  # before_filter :require_editor, :except => [:index,:show]
+  before_filter :authenticate_user!
   
   def get_atr_value(elem, atr, couples)
     if atr.instance_of?(String) && atr.include?('.')

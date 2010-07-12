@@ -203,13 +203,13 @@ specs:
     version: 1.0.0.beta
     source: 0
 - rspec-core: 
-    version: 2.0.0.beta.16
+    version: 2.0.0.beta.17
 - rspec-expectations: 
-    version: 2.0.0.beta.16
+    version: 2.0.0.beta.17
 - rspec-mocks: 
-    version: 2.0.0.beta.16
+    version: 2.0.0.beta.17
 - rspec: 
-    version: 2.0.0.beta.16
+    version: 2.0.0.beta.17
 - selenium-client: 
     version: 1.2.18
 - selenium-rc: 
@@ -237,7 +237,7 @@ specs:
 - webrat: 
     version: 0.7.1
 - rspec-rails: 
-    version: 2.0.0.beta.16
+    version: 2.0.0.beta.17
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
@@ -245,7 +245,7 @@ specs:
 - spork: 
     version: 0.8.4
 - sqlite3-ruby: 
-    version: 1.3.0
+    version: 1.3.1
 - will_paginate: 
     version: 3.0.pre
 hash: fe5c359c2bbd21c3305c1943beddb380dd292687
@@ -254,6 +254,6 @@ sources:
     uri: git://github.com/justinfrench/formtastic.git
     branch: rails3
     git: git://github.com/justinfrench/formtastic.git
-    ref: f763772f1287760b160b2a971be8d67e6553a9fe
+    ref: 7ba805195bdf6422197829a1c509aa207b81da0a
 - Rubygems: 
     uri: http://gemcutter.org

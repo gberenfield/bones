@@ -39,7 +39,7 @@ Bones::Application.routes.draw do |map|
   #   end
   resources :attachments
   resources :users
-  resource :user_session
+  # resource :user_session
 
   # Sample resource route with more complex sub-resources
   #   resources :products do
