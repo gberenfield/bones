@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  filter_parameter_logging :password, :password_confirmation # Scrub sensitive parameters from your log
   helper_method :current_user_session, :current_user  # THIS MAKES THESE METHODS AVAILABLE TO ALL CONTROLLERS AS HELPERS!!!!
   # before_filter :require_user
       
