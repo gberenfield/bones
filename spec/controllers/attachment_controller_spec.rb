@@ -6,7 +6,7 @@ describe AttachmentsController do
   before {
     @user  = User.make(:admin)
     @user2 = User.make
-    session[:user_id]=1  # ok! This is all that's necessary to get the :before_filter and authorize() to pass so acts like I'm "logged in" 
+    sign_in @user 
   }
 
   it "should show an Attachment" do
