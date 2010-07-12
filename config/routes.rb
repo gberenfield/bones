@@ -1,11 +1,14 @@
 Bones::Application.routes.draw do |map|
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match "login" =>"user_sessions#new"
-  match "logout" =>"user_sessions#destroy"
+  # match "login" =>"user_sessions#new"
+  # match "logout" =>"user_sessions#destroy"
 
   match "/attachments/updategrid" => "attachments#updategrid"  
+  match "/attachments/grid" => "attachments#grid"  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
