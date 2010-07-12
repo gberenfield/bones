@@ -12,7 +12,7 @@ Feature: Signing into the system
 		Given I am a valid user
 		When I go to the log in screen
 		And I enter my username and password
-		Then I should see "Login successful!"
+		Then I should see "Signed in successfully."
 		
 	Scenario: A valid user unsuccessfully logging in
 		Given I am a valid user
