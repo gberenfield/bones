@@ -1,5 +1,15 @@
-<% title "New User" %>
+<% @hide_dynamic=true %>
+<% javascript "header" %>
+<% title "Users" %>
 
-<%= render :partial => 'form' %>
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"user_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+	<%= render :partial => 'form' %>
 
-<p><%= link_to "Back to List", users_path %></p>
+	<p><%= link_to "Back to List", users_path %></p>
+</div>

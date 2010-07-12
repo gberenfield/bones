@@ -1,10 +1,18 @@
+<% @hide_dynamic=true %>
+<% javascript "header" %>
 <% title "Edit Attachments" %>
-<% content_for :sidebar do %>
-	<%= render :partial=>"attachment_menu" %>
-<% end %>
 
-<%= render :partial => 'form' %>
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"user_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
 
-<p>
-  <%= link_to "Show", @attachment %>
-</p>
+	<%= render :partial => 'form' %>
+
+	<p>
+	  <%= link_to "Show", @attachment %>
+	</p>
+</div>

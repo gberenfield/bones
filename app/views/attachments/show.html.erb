@@ -1,29 +1,37 @@
+<% @hide_dynamic=true %>
+<% javascript "header" %>
 <% title "Attachments" %>
-<% content_for :sidebar do %>
-	<%= render :partial=>"attachment_menu" %>
-<% end %>
 
-<p>
-  <strong>File URL:</strong>
-	<%= link_to "Attached File", @attachment.attachment.url,:target=>"_blank" %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%=h @attachment.description %>
-</p>
-<p>
-  <strong>Attachment Date:</strong>
-  <%=h @attachment.attachment_date %>
-</p>
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"user_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
 
-<p>
-  <strong>Comments:</strong>
-<hr>
-  <%= @attachment.comments %>
-</p>
-<% if is_editor %>
 	<p>
-	  <%= link_to "Edit", edit_attachment_path(@attachment) %> |
-	  <%= link_to "Destroy", @attachment, :confirm => 'Are you sure?', :method => :delete %> 
+	  <strong>File URL:</strong>
+		<%= link_to "Attached File", @attachment.attachment.url,:target=>"_blank" %>
 	</p>
-<% end %>
+	<p>
+	  <strong>Description:</strong>
+	  <%=h @attachment.description %>
+	</p>
+	<p>
+	  <strong>Attachment Date:</strong>
+	  <%=h @attachment.attachment_date %>
+	</p>
+
+	<p>
+	  <strong>Comments:</strong>
+	<hr>
+	  <%= @attachment.comments %>
+	</p>
+	<% if is_editor %>
+		<p>
+		  <%= link_to "Edit", edit_attachment_path(@attachment) %> |
+		  <%= link_to "Destroy", @attachment, :confirm => 'Are you sure?', :method => :delete %> 
+		</p>
+	<% end %>
+</div>

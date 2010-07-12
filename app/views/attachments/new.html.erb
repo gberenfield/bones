@@ -1,8 +1,15 @@
+<% @hide_dynamic=true %>
+<% javascript "header" %>
 <% title "New Attachments" %>
-<% content_for :sidebar do %>
-	<%= render :partial=>"attachment_menu" %>
-<% end %>
 
-<%= render :partial => 'form' %>
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"user_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+	<%= render :partial => 'form' %>
 
-<p><%= link_to "Back to List", attachments_path %></p>
+	<p><%= link_to "Back to List", attachments_path %></p>
+</div>
