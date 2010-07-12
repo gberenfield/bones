@@ -54,7 +54,6 @@ group :test do
   gem "spork"
   gem "rspec",        ">=2.0.0.beta.12"
   gem "machinist"
-  gem "faker"
   gem "forgery"
   gem "mocha"
 end

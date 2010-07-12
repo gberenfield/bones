@@ -1,21 +1,16 @@
 require 'machinist/active_record'
-require 'sham'
-require 'faker'
+# require 'sham'
+require 'forgery'
 
-Sham.login { Faker::Name.first_name }
-Sham.email { Faker::Internet.email }
+Sham.login  { Forgery::Internet.user_name }
+Sham.email  { Forgery::Internet.email_address }
 Sham.tenchar { (("0".."9").to_a+("a".."z").to_a).sample(10).join }
 
 User.blueprint do
   login {Sham.login}
   email {Sham.email}
-  crypted_password {"password"}
-  password_salt {"password"}
   password { 'funkypass' }
   password_confirmation { 'funkypass' }
-  persistence_token {Sham.tenchar}
-  single_access_token { Sham.tenchar }
-  perishable_token { Sham.tenchar }
 end
 
 User.blueprint(:admin) do
@@ -26,6 +21,6 @@ User.blueprint(:admin) do
 end
 
 Attachment.blueprint do
-  attachment_file_name {Faker::Name.last_name}
-  description {Faker::Lorem.paragraph}  
+  attachment_file_name { Forgery::Basic.text }
+  description { Forgery::LoremIpsum.text }  
 end
