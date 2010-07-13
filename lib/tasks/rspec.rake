@@ -42,6 +42,7 @@ namespace :spec do
   [:requests, :models, :controllers, :views, :helpers, :mailers, :lib, :routing].each do |sub|
     desc "Run the code examples in spec/#{sub}"
     RSpec::Core::RakeTask.new(sub => spec_prereq) do |t|
+      t.rcov = true
       t.pattern = "./spec/#{sub}/**/*_spec.rb"
     end
   end

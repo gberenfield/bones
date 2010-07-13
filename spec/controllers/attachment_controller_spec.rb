@@ -11,18 +11,13 @@ describe AttachmentsController do
 
   it "should show an Attachment" do
     attachment=Attachment.make
-    # puts "The attahcment ID is: #{(attachment.id).to_s}"
-    # attachment = stub_model(Attachment)
-    # Attachment.stub(:find).with("37") { attachment }
-    # get :show, :id => "37"
     get :show, :id=>attachment.id
     response.should render_template(:show)
-    # assigns(:attachment).should eq(attachment)
   end
 
   # it "should let me enter a new one" do
-  #   session[:username]=User.first.username
-  #   get 'new',:Attachment=>Attachment.first.id
+  #   session[:username]=User.first.login
+  #   get 'new',:attachment=>Attachment.first.id
   #   response.should be_success
   # end
   # 

@@ -17,13 +17,30 @@ namespace :rcov do
     t.rcov_opts << %[-o "coverage"]
   end
   
-  RSpec::Core::RakeTask.new(:rspec_run) do |t|
+  # RSpec::Core::RakeTask.new(:rspec_run) do |tttt|
+  task :rspec_run do
     #t.rspec_opts = ['--options', "\"#{RAILS_ROOT}/spec/spec.opts\""]    # deprecated?
-    t.pattern = FileList['spec/**/*_spec.rb']
-    t.rcov = true
-    t.rcov_opts = lambda do
-      IO.readlines("#{RAILS_ROOT}/spec/rcov.opts").map {|l| l.chomp.split " "}.flatten
+    # t.pattern = FileList['spec/**/*_spec.rb']
+    # t.rcov = true
+    # t.rcov_opts = lambda do
+    #   IO.readlines("#{RAILS_ROOT}/spec/rcov.opts").map {|l| l.chomp.split " "}.flatten
+    # end
+    spec_prereq = Rails.root.join('config', 'database.yml').exist? ? "db:test:prepare" : :noop
+    [:requests, :models, :controllers, :views, :helpers, :mailers, :lib, :routing].each do |sub|
+      desc "Run the code examples in spec/#{sub}"
+      RSpec::Core::RakeTask.new(sub => spec_prereq) do |t|
+        t.pattern = "./spec/#{sub}/**/*_spec.rb"
+        t.rcov = true
+        t.rcov_opts = lambda do
+          IO.readlines("#{RAILS_ROOT}/spec/rcov.opts").map {|l| l.chomp.split " "}.flatten
+        end        
+      end
     end
+    # 
+    # RSpec::Core::RakeTask.new(sub => spec_prereq) do |t|
+    #   t.pattern = "./spec/#{sub}/**/*_spec.rb"
+    # end
+    # 
   end
   
   desc "Run both specs and features to generate aggregated coverage"
