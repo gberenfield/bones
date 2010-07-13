@@ -6,7 +6,7 @@ describe AttachmentsController do
   before {
     @user  = User.make(:admin)
     @user2 = User.make
-    sign_in @user 
+    sign_in @user
   }
 
   it "should show an Attachment" do
@@ -15,11 +15,11 @@ describe AttachmentsController do
     response.should render_template(:show)
   end
 
-  # it "should let me enter a new one" do
-  #   session[:username]=User.first.login
-  #   get 'new',:attachment=>Attachment.first.id
-  #   response.should be_success
-  # end
+  it "should let me enter a new one" do
+    session[:username]=User.first.login
+    get 'new'
+    response.should be_success
+  end
   # 
   # it "should let me edit a Attachment" do
   #   get :edit, :id => Attachment.first
