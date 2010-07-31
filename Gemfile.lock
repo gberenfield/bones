@@ -1,253 +1,214 @@
---- 
-dependencies: 
-  spork: 
-    group: 
-    - :test
-    version: ">= 0"
-  ruby-debug: 
-    group: 
-    - :test
-    version: ">= 0"
-  rails: 
-    group: 
-    - :default
-    version: = 3.0.0.beta4
-  sqlite3-ruby: 
-    group: 
-    - :default
-    version: ">= 0"
-    require: 
-    - sqlite3
-  machinist: 
-    group: 
-    - :test
-    version: ">= 0"
-  autotest: 
-    group: 
-    - :test
-    version: ">= 0"
-  forgery: 
-    group: 
-    - :test
-    version: ">= 0"
-  rspec: 
-    group: 
-    - :test
-    version: ">= 2.0.0.beta.12"
-  database_cleaner: 
-    group: 
-    - :test
-    version: ">= 0"
-  rspec-rails: 
-    group: 
-    - :test
-    version: ">= 2.0.0.beta.12"
-  formtastic: 
-    group: 
-    - :default
-    version: ">= 0"
-  mocha: 
-    group: 
-    - :test
-    version: ">= 0"
-  jasmine: 
-    group: 
-    - :test
-    version: ">= 0"
-  rcov: 
-    group: 
-    - :test
-    version: ">= 0"
-  paperclip: 
-    group: 
-    - :default
-    version: ">= 2.3.3"
-  devise: 
-    group: 
-    - :default
-    version: ">= 1.1rc2"
-  will_paginate: 
-    group: 
-    - :default
-    version: = 3.0.pre
-  cucumber-rails: 
-    group: 
-    - :test
-    version: ">= 0.3.2"
-  cucumber: 
-    group: 
-    - :test
-    version: ">= 0"
-  capybara: 
-    group: 
-    - :test
-    version: ">= 0.3.8"
-  autotest-rails: 
-    group: 
-    - :test
-    version: ">= 0"
-  capistrano: 
-    group: 
-    - :development
-    version: ">= 0"
-  launchy: 
-    group: 
-    - :test
-    version: ">= 0"
-specs: 
-- rake: 
-    version: 0.8.7
-- ZenTest: 
-    version: 4.3.3
-- abstract: 
-    version: 1.0.0
-- activesupport: 
-    version: 3.0.0.beta4
-- builder: 
-    version: 2.1.2
-- i18n: 
-    version: 0.4.1
-- activemodel: 
-    version: 3.0.0.beta4
-- erubis: 
-    version: 2.6.6
-- rack: 
-    version: 1.1.0
-- rack-mount: 
-    version: 0.6.9
-- rack-test: 
-    version: 0.5.4
-- tzinfo: 
-    version: 0.3.22
-- actionpack: 
-    version: 3.0.0.beta4
-- mime-types: 
-    version: "1.16"
-- polyglot: 
-    version: 0.3.1
-- treetop: 
-    version: 1.4.8
-- mail: 
-    version: 2.2.5
-- actionmailer: 
-    version: 3.0.0.beta4
-- arel: 
-    version: 0.4.0
-- activerecord: 
-    version: 3.0.0.beta4
-- activeresource: 
-    version: 3.0.0.beta4
-- autotest: 
-    version: 4.3.2
-- autotest-rails: 
-    version: 4.1.0
-- bcrypt-ruby: 
-    version: 2.1.2
-- bundler: 
-    version: 0.9.26
-- highline: 
-    version: 1.5.2
-- net-ssh: 
-    version: 2.0.23
-- net-scp: 
-    version: 1.0.2
-- net-sftp: 
-    version: 2.0.4
-- net-ssh-gateway: 
-    version: 1.0.1
-- capistrano: 
-    version: 2.5.19
-- culerity: 
-    version: 0.2.10
-- nokogiri: 
-    version: 1.4.2
-- ffi: 
-    version: 0.6.3
-- json_pure: 
-    version: 1.4.3
-- selenium-webdriver: 
-    version: 0.0.24
-- capybara: 
-    version: 0.3.9
-- columnize: 
-    version: 0.3.1
-- configuration: 
-    version: 1.1.0
-- diff-lcs: 
-    version: 1.1.2
-- trollop: 
-    version: 1.16.2
-- gherkin: 
-    version: 2.1.2
-- term-ansicolor: 
-    version: 1.0.5
-- cucumber: 
-    version: 0.8.4
-- cucumber-rails: 
-    version: 0.3.2
-- database_cleaner: 
-    version: 0.5.2
-- warden: 
-    version: 0.10.7
-- devise: 
-    version: 1.1.rc2
-- forgery: 
-    version: 0.3.4
-- formtastic: 
-    version: 1.0.0.beta
-    source: 0
-- rspec-core: 
-    version: 2.0.0.beta.17
-- rspec-expectations: 
-    version: 2.0.0.beta.17
-- rspec-mocks: 
-    version: 2.0.0.beta.17
-- rspec: 
-    version: 2.0.0.beta.17
-- selenium-client: 
-    version: 1.2.18
-- selenium-rc: 
-    version: 2.2.4
-- jasmine: 
-    version: 0.11.1.0
-- launchy: 
-    version: 0.3.5
-- linecache: 
-    version: "0.43"
-- machinist: 
-    version: 1.0.6
-- mocha: 
-    version: 0.9.8
-- paperclip: 
-    version: 2.3.3
-- thor: 
-    version: 0.13.7
-- railties: 
-    version: 3.0.0.beta4
-- rails: 
-    version: 3.0.0.beta4
-- rcov: 
-    version: 0.9.8
-- webrat: 
-    version: 0.7.1
-- rspec-rails: 
-    version: 2.0.0.beta.17
-- ruby-debug-base: 
-    version: 0.10.3
-- ruby-debug: 
-    version: 0.10.3
-- spork: 
-    version: 0.8.4
-- sqlite3-ruby: 
-    version: 1.3.1
-- will_paginate: 
-    version: 3.0.pre
-hash: b1216b0a722143965b34074460c200ba23296639
-sources: 
-- Git: 
-    uri: git://github.com/justinfrench/formtastic.git
-    branch: rails3
-    git: git://github.com/justinfrench/formtastic.git
-    ref: 7ba805195bdf6422197829a1c509aa207b81da0a
-- Rubygems: 
-    uri: http://gemcutter.org
+GIT
+  remote: git://github.com/justinfrench/formtastic.git
+  revision: 6c3a884
+  branch: rails3
+  specs:
+    formtastic (1.0.0.beta3)
+      actionpack (>= 2.3.0)
+      activesupport (>= 2.3.0)
+      i18n (>= 0.4.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ZenTest (4.3.3)
+    abstract (1.0.0)
+    actionmailer (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      mail (~> 2.2.5)
+    actionpack (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4.1)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.9)
+      rack-test (~> 0.5.4)
+      tzinfo (~> 0.3.22)
+    activemodel (3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      arel (~> 0.4.0)
+      tzinfo (~> 0.3.22)
+    activeresource (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+    activesupport (3.0.0.rc)
+    archive-tar-minitar (0.5.2)
+    arel (0.4.0)
+      activesupport (>= 3.0.0.beta)
+    autotest (4.3.2)
+    autotest-rails (4.1.0)
+      ZenTest
+    bcrypt-ruby (2.1.2)
+    builder (2.1.2)
+    capistrano (2.5.19)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.0.0)
+    capybara (0.3.9)
+      culerity (>= 0.2.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (>= 0.0.3)
+    columnize (0.3.1)
+    configuration (1.1.0)
+    cucumber (0.8.5)
+      builder (~> 2.1.2)
+      diff-lcs (~> 1.1.2)
+      gherkin (~> 2.1.4)
+      json_pure (~> 1.4.3)
+      term-ansicolor (~> 1.0.4)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
+    culerity (0.2.10)
+    database_cleaner (0.5.2)
+    devise (1.1.1)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 0.10.7)
+    diff-lcs (1.1.2)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    faker (0.3.1)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    forgery (0.3.4)
+    gherkin (2.1.5)
+      trollop (~> 1.16.2)
+    highline (1.6.1)
+    i18n (0.4.1)
+    jasmine (0.11.1.0)
+      rack (>= 1.0.0)
+      rspec (>= 1.1.5)
+      selenium-client (>= 1.2.17)
+      selenium-rc (>= 2.1.0)
+    json_pure (1.4.3)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    linecache19 (0.5.11)
+      ruby_core_source (>= 0.1.4)
+    machinist (1.0.6)
+    mail (2.2.5)
+      activesupport (>= 2.3.6)
+      mime-types
+      treetop (>= 1.4.5)
+    mime-types (1.16)
+    mocha (0.9.8)
+      rake
+    net-scp (1.0.2)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.4)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.0.23)
+    net-ssh-gateway (1.0.1)
+      net-ssh (>= 1.99.1)
+    nokogiri (1.4.3.1)
+    paperclip (2.3.3)
+      activerecord
+      activesupport
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.9)
+      rack (>= 1.0.0)
+    rack-test (0.5.4)
+      rack (>= 1.0)
+    rails (3.0.0.rc)
+      actionmailer (= 3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activerecord (= 3.0.0.rc)
+      activeresource (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      bundler (>= 1.0.0.rc.1)
+      railties (= 3.0.0.rc)
+    railties (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      rake (>= 0.8.3)
+      thor (~> 0.14.0)
+    rake (0.8.7)
+    rcov (0.9.8)
+    rspec (2.0.0.beta.19)
+      rspec-core (= 2.0.0.beta.19)
+      rspec-expectations (= 2.0.0.beta.19)
+      rspec-mocks (= 2.0.0.beta.19)
+    rspec-core (2.0.0.beta.19)
+    rspec-expectations (2.0.0.beta.19)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.0.beta.19)
+    rspec-rails (2.0.0.beta.19)
+      rspec (= 2.0.0.beta.19)
+      webrat (>= 0.7.2.beta.1)
+    ruby-debug-base19 (0.11.23)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.4)
+      archive-tar-minitar (>= 0.5.2)
+    rubyzip (0.9.4)
+    selenium-client (1.2.18)
+    selenium-rc (2.2.4)
+      selenium-client (>= 1.2.18)
+    selenium-webdriver (0.0.27)
+      ffi (>= 0.6.1)
+      json_pure
+      rubyzip
+    spork (0.8.4)
+    sqlite3-ruby (1.3.1)
+    term-ansicolor (1.0.5)
+    thor (0.14.0)
+    treetop (1.4.8)
+      polyglot (>= 0.3.1)
+    trollop (1.16.2)
+    tzinfo (0.3.22)
+    warden (0.10.7)
+      rack (>= 1.0.0)
+    webrat (0.7.2.beta.1)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+    will_paginate (3.0.pre2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  autotest
+  autotest-rails
+  capistrano
+  capybara (>= 0.3.8)
+  cucumber
+  cucumber-rails (>= 0.3.2)
+  database_cleaner
+  devise (>= 1.1rc2)
+  faker
+  forgery
+  formtastic!
+  jasmine
+  launchy
+  linecache19
+  machinist
+  mocha
+  paperclip (>= 2.3.3)
+  rails (= 3.0.0.rc)
+  rcov
+  rspec (>= 2.0.0.beta.12)
+  rspec-rails (>= 2.0.0.beta.12)
+  ruby-debug-base19
+  ruby-debug19
+  spork
+  sqlite3-ruby
+  will_paginate (>= 3.0.pre)
