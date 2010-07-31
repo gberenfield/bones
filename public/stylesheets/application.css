@@ -157,9 +157,6 @@ a.myajaxbutton {
 }
 
 #containsgrid{
-   	-webkit-box-shadow: 2px 2px 4px  ;
-	-moz-box-shadow: 2px 2px 4px ;
-	box-shadow: 2px 2px 4px ;
     clear: both;
     margin-top: 10px;
     display: block;
