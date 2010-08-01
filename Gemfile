@@ -17,12 +17,13 @@ gem 'will_paginate', '>=3.0.pre'
 
 
 group :development do
-  gem "linecache19"
+  # gem "linecache19"
   # gem install linecache19 -- --with-ruby-include=/Users/mc/.rvm/src/ruby-1.9.2-rc2
   # gem install ruby-debug-base19 -- --with-ruby-include=/Users/mc/.rvm/src/ruby-1.9.2-rc2
   
-  gem "ruby-debug-base19"
-  gem "ruby-debug19"
+  # gem "ruby-debug-base19"
+  # gem "ruby-debug19"
+  gem "ruby-debug"
   gem 'capistrano'
 end 
 
