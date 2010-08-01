@@ -5,15 +5,13 @@
 	<title><%= h(yield(:title) || "Untitled") %></title>
 
 	<%= stylesheet_link_tag 'blueprint/screen',  #blueprint stylesheet
-	'jquery-ui-1.8.1.custom',
-	'jquery.rte','application','formtastic',
-	'formtastic_changes','colorbox',"jquery.auto-complete.css", 'mbExtruder',
+	'jquery-ui-1.8.2.custom',
+	'application','formtastic',
+	'formtastic_changes','colorbox',
 	'ui.jqgrid.css', :cache => "cache/all", :recursive => true %>
 	
-	<%= javascript_include_tag 'jquery-1.4.2.min',"jquery-ui-1.8.1.custom.min","jquery.rte",
-	"jquery.rte.tb","jquery.ocupload-1.1.4","jquery.colorbox-1.3.6.min", 
-	"grid.locale-en.js", "jquery.jqGrid.min", "jquery.metadata.js","jquery.auto-complete.min.js",
-	"jquery.hoverIntent.min.js","jquery.metadata.js","jquery.mb.flipText.min.js","mbExtruder.min.js",
+	<%= javascript_include_tag 'jquery-1.4.2.min',"jquery-ui-1.8.2.custom.min.js",
+	"jquery.colorbox-1.3.6.min", "grid.locale-en.js", "jquery.jqGrid.min", 
 	"application.js",  :cache => "cache/all", :recursive => true %>
 
 	<%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
