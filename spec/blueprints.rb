@@ -1,5 +1,4 @@
 require 'machinist/active_record'
-# require 'sham'
 require 'forgery'
 
 Sham.login  { Forgery::Internet.user_name }

@@ -45,6 +45,5 @@ group :test do
   gem "rspec",        ">=2.0.0.beta.12"
   gem "machinist"
   gem "forgery"
-  gem "faker"  
   gem "mocha"
 end
