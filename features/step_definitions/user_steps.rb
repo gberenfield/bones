@@ -22,3 +22,7 @@ Given /^I am an authenticated admin user$/ do
   fill_in("Password", :with => @user.password)
   click_button("Sign in")      
 end
+
+When /^I delete the user$/ do
+  visit "/users/#{@user2.id}", :method=>:delete
+end

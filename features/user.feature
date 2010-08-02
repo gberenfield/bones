@@ -33,4 +33,11 @@ Feature: Managing Users
 	  Then I should see "newemail@ami.org"
 	
 	
+	Scenario: Delete a user
+	  Given I am an authenticated admin user
+		And I have a user with an e-mail "who@ami.org"
+		When I delete the user
+	  Then I should see "Successfully destroyed user."
+	
+	
 	
