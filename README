@@ -26,6 +26,14 @@ RAILS
 =====
 3.0.0.rc
 
+TESTING
+=======
+
+RCOV works with rspec and cucumber as follows:
+cucumber coverage: rake cucumber
+rspec coverage: rake rcov
+
+Autotest working with rspec and not cucumber as of 2010-08-01
 
 GEMS
 ====
