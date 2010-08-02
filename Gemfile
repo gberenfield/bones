@@ -35,6 +35,7 @@ group :development do
   gem "machinist"
   gem "forgery"
   gem "mocha"
+  gem "autotest-growl"
 end 
 
 

@@ -42,6 +42,8 @@ GEM
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
     autotest (4.3.2)
+    autotest-growl (0.2.4)
+      autotest (>= 4.2.4)
     autotest-rails (4.1.0)
       ZenTest
     bcrypt-ruby (2.1.2)
@@ -175,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   autotest
+  autotest-growl
   autotest-rails
   capistrano
   capybara (>= 0.3.8)
