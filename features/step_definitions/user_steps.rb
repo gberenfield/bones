@@ -6,6 +6,15 @@ Given /^I am an authenticated valid non\-admin user$/ do
     click_button("Sign in")      
 end
 
+Given /^I have a user with an e\-mail "([^"]*)"$/ do |arg1|
+  @user2=User.make(:email=>arg1)
+end
+
+Given /^I edit the user with a new email "([^"]*)"$/ do |arg1|
+  visit "/users/#{@user2.id}/edit"
+  fill_in("Email", :with => arg1)
+end
+
 Given /^I am an authenticated admin user$/ do
   @user=User.make(:admin=>true)
   visit '/users/sign_in'
