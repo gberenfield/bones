@@ -36,6 +36,7 @@ group :development do
   gem "forgery"
   gem "mocha"
   gem "autotest-growl"
+  gem "launchy"
 end 
 
 

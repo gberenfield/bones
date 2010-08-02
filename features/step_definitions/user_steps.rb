@@ -24,5 +24,10 @@ Given /^I am an authenticated admin user$/ do
 end
 
 When /^I delete the user$/ do
-  visit "/users/#{@user2.id}", :method=>:delete
+  visit user_path(@user2.id),"data-method"=>:delete
+  # save_and_open_page
+end
+
+When /^I click "([^"]*)"$/ do |arg1|
+  page.driver.assertConfirmation('Are you sure?')
 end
