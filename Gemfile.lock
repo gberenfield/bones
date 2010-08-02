@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/justinfrench/formtastic.git
-  revision: efbb09c
+  revision: a2ce2ea
   branch: rails3
   specs:
     formtastic (1.0.0.rc)
@@ -60,7 +60,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.3)
     columnize (0.3.1)
-    configuration (1.1.0)
     cucumber (0.8.5)
       builder (~> 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -77,7 +76,6 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    faker (0.3.1)
     ffi (0.6.3)
       rake (>= 0.8.7)
     forgery (0.3.4)
@@ -91,9 +89,6 @@ GEM
       selenium-client (>= 1.2.17)
       selenium-rc (>= 2.1.0)
     json_pure (1.4.3)
-    launchy (0.3.7)
-      configuration (>= 0.0.5)
-      rake (>= 0.8.1)
     linecache (0.43)
     machinist (1.0.6)
     mail (2.2.5)
@@ -183,22 +178,18 @@ DEPENDENCIES
   autotest-rails
   capistrano
   capybara (>= 0.3.8)
-  cucumber
   cucumber-rails (>= 0.3.2)
   database_cleaner
   devise (>= 1.1rc2)
-  faker
   forgery
   formtastic!
   jasmine
-  launchy
   machinist
   mocha
   paperclip (>= 2.3.3)
   rails (= 3.0.0.rc)
   rcov
-  rspec (>= 2.0.0.beta.12)
-  rspec-rails (>= 2.0.0.beta.12)
+  rspec-rails (>= 2.0.0.beta.19)
   ruby-debug
   spork
   sqlite3-ruby

@@ -1,19 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html  xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 	<title><%= h(yield(:title) || "Untitled") %></title>
 
-	<%= stylesheet_link_tag 'blueprint/screen',  #blueprint stylesheet
-	'jquery-ui-1.8.2.custom',
-	'application','formtastic',
-	'formtastic_changes','colorbox',
+	<%= stylesheet_link_tag 'blueprint/screen', 'jquery-ui-1.8.2.custom',
+	'application','formtastic',	'formtastic_changes','colorbox',
 	'ui.jqgrid.css', :cache => "cache/all", :recursive => true %>
 	
 	<%= javascript_include_tag 'jquery-1.4.2.min',"jquery-ui-1.8.2.custom.min.js",
 	"jquery.colorbox-1.3.6.min", "grid.locale-en.js", "jquery.jqGrid.min", 
 	"application.js",  :cache => "cache/all", :recursive => true %>
 
+	<%= csrf_meta_tag %>
+	
 	<%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
 </head>
   <body>

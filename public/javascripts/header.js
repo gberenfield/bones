@@ -5,8 +5,4 @@ $(document).ready(function(){
 		dateFormat: "yy-mm-dd"
 	});
 
-	$('.rte').rte({
-		controls_rte: rte_toolbar,
-		controls_html: html_toolbar
-	});
 });

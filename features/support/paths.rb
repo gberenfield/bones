@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when /the log in screen/
       '/users/sign_in'
+    when /the list of users/
+      '/users'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

@@ -25,25 +25,20 @@ group :development do
   # gem "ruby-debug19"
   gem "ruby-debug"
   gem 'capistrano'
+  gem "rspec-rails",    ">=2.0.0.beta.19"
+  gem "cucumber-rails", ">=0.3.2"
+  gem "capybara",       ">=0.3.8"
+  gem "jasmine"
+  gem "database_cleaner"
+  gem "spork"
+  gem "rcov"
+  gem "machinist"
+  gem "forgery"
+  gem "mocha"
 end 
 
 
 group :test do
-  # trying to add and get working
   gem "autotest-rails"
   gem "autotest"  
-  gem "rcov"
-  
-  gem "rspec-rails",    ">=2.0.0.beta.12"
-  gem "cucumber-rails", ">=0.3.2"
-  gem "capybara",       ">=0.3.8"
-  gem "launchy"
-  gem "jasmine"
-  gem "cucumber"
-  gem "database_cleaner"
-  gem "spork"
-  gem "rspec",        ">=2.0.0.beta.12"
-  gem "machinist"
-  gem "forgery"
-  gem "mocha"
 end

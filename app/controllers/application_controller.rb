@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate_user!
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   # helper_method :current_user_session, :current_user  # THIS MAKES THESE METHODS AVAILABLE TO ALL CONTROLLERS AS HELPERS!!!!
@@ -15,7 +16,7 @@ class ApplicationController < ActionController::Base
   #   return @current_user if defined?(@current_user)
   #   @current_user = current_user_session && current_user_session.user
   # end
-
+  # 
   # def user_admin
   #   current_user
   #   return @current_user.admin if defined?(@current_user)
@@ -34,15 +35,15 @@ class ApplicationController < ActionController::Base
   #     return false
   #   end
   # end
-  # 
-  # def require_admin
-  #   unless user_admin
-  #     store_location
-  #     flash[:error] = "You must be an Administrator to access this page"
-  #     redirect_to root_path
-  #     return false
-  #   end
-  # end
+  
+  def require_admin
+    unless current_user.admin
+      store_location
+      flash[:error] = "You must be an Administrator to access this page"
+      redirect_to root_path
+      return false
+    end
+  end
   # 
   # def require_editor
   #   unless (user_editor || user_admin)
