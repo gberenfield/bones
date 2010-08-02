@@ -13,6 +13,7 @@ script/pulldb
 doc/plugins
 db/old
 coverage
+coverage.data
 public/attachments
 /attachments
 .bundle
