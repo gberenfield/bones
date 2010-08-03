@@ -1,10 +1,5 @@
 var lastsel,amiana,role,currentGrid;
 
-$(window).load(function(){
-	var flash_message = $("#flash_notice");
-	if (flash_message != null) { flash_message.fadeTo(4000,0); }
-});
-
 var BONES = {
 	userights:function(){
 		amiana = (eval($("#amiana").val())); // am i an admin (or editor)

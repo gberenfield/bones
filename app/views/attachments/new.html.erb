@@ -1,10 +1,9 @@
-<% @hide_dynamic=true %>
-<% javascript "header" %>
+<% @use_dynamic=true %>
 <% title "New Attachments" %>
 
 <div class="span-24 sidebar_container last">
 	<div class="span-24 padabit">
-		<%= render :partial=>"user_menu" %>
+		<%= render :partial=>"attachment_menu" %>
 	</div>
 </div>
 <div class="span-24 padown last">&nbsp;</div>
@@ -13,3 +12,7 @@
 
 	<p><%= link_to "Back to List", attachments_path %></p>
 </div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>

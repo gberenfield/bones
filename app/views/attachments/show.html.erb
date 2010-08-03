@@ -1,5 +1,4 @@
-<% @hide_dynamic=true %>
-<% javascript "header" %>
+<% @use_dynamic=true %>
 <% title "Attachments" %>
 
 <div class="span-24 sidebar_container last">
@@ -35,3 +34,7 @@
 		</p>
 	<% end %>
 </div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>

@@ -3,22 +3,18 @@ class UsersController < ApplicationController
   before_filter :require_admin
   
   def index
-    @hide_dynamic=false
     @users = User.all
   end
   
   def show
-    @hide_dynamic=true
     @user = User.find(params[:id])
   end
   
   def new
-    @hide_dynamic=true
     @user = User.new
   end
   
   def create
-    @hide_dynamic=true
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Successfully created user."
@@ -29,12 +25,10 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @hide_dynamic=true
     @user = User.find(params[:id])
   end
   
   def update
-    @hide_dynamic=true
     params[:user].delete(:password) if params[:user][:password].blank?
     params[:user].delete(:password_confirmation) if params[:user][:password_confirmation].blank?
         
@@ -48,7 +42,6 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    @hide_dynamic=true
     @user = User.find(params[:id])
     @user.destroy
     flash[:notice] = "Successfully destroyed user."

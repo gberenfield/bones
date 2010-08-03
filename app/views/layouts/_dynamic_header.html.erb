@@ -1,0 +1,37 @@
+<div class="span-24 last">
+	<div id="header_container">  <!-- for header backgrounds or borders, etc. in application.css -->
+	  <div id="title_holder"> </div>
+		<div id="flashes"> </div>
+		<input type='hidden' id='amiana'>  <!-- am I an editor? setting it here for jQuery parsing -->
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+	
+		<%- flash.each do |name, msg| -%>
+			$("#flashes").append('<%= content_tag :div, msg, :id => "flash_#{name}" %>');
+		<%- end -%>
+		<%- if show_title? -%>
+			$("#title_holder").html('<h2><%= h yield(:title)|| "no title" %></h2>');
+		<%- end -%>			
+	
+	  var flash_message = $("#flash_notice");
+  	if (flash_message != null) { 
+  		flash_message.fadeTo(4000,0);
+  	}
+  	
+		$('.mydatepicker').datepicker({
+			showButtonPanel: true,
+			dateFormat: "yy-mm-dd"
+		});
+
+		<% unless current_user.nil? then %>
+			amiana = <%= current_user.admin %>
+			$("#amiana").val(amiana)
+		<% end %>
+
+		if (amiana) { $('.admin').show(); }
+		
+	});
+</script>

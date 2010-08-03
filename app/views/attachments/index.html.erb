@@ -1,5 +1,4 @@
-<% @hide_dynamic=true %>
-<% javascript "header" %>
+<% @use_dynamic=true %>
 <% title "Attachments" %>
 
 <div class="span-24 sidebar_container last">
@@ -14,7 +13,7 @@
 </div>
 
 <script>
-	$(".container").prepend('<%= escape_javascript render("layouts/dynamic_header")%>');
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
 
 	function babafoo(){
 		$("#thegrid").jqGrid('navButtonAdd','#pager',{ 
@@ -23,7 +22,7 @@
 				$("#thegrid").jqGrid('columnChooser'); 
 			}
 		});
-		
+	
 		$("#thegrid").jqGrid('navButtonAdd',"#pager",{caption:"Toggle",
 			title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s', 
 			onClickButton:function(){ $("#thegrid")[0].toggleToolbar() } 
@@ -36,7 +35,7 @@
 
 		$("#thegrid").jqGrid('gridResize',{minWidth:350,maxWidth:1000,minHeight:100, maxHeight:1024});	
 		$("#thegrid").jqGrid('filterToolbar');
-		
+	
 	}
 	BONES.userights();
 	// function buildorderbuttons(){ alert("bilderbuttonsfromindex"); }
@@ -47,7 +46,7 @@
 		{name:'description', index:'description', width:160, align:'left',sortable:true}, 
 		{name:'comments', index:'comments', editable:true,sorttype:'text',width:100}
 		];
-	
+
 	BONES.buildGrid("#thegrid",cnames,cmodel,{
 		caption:'Attachments',
 		sortname:"attachment_file_name",

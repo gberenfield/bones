@@ -1,4 +1,4 @@
-<% javascript "header" %>
+<% @use_dynamic=true %>
 <% title "Edit User" %>
 
 <div class="span-24 sidebar_container last">
@@ -14,3 +14,7 @@
 	  <%= link_to "Show", @user %>
 	</p>
 </div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>

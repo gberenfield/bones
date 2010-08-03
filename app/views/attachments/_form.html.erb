@@ -1,18 +1,3 @@
-<script type="text/javascript">
-$(function() {
-	$('.mydatepicker').datepicker({
-		showButtonPanel: true,
-		dateFormat: "yy-mm-dd"
-	});
-
-	$('.rte').rte({
-	controls_rte: rte_toolbar,
-	controls_html: html_toolbar
-	});
-	
-});
-</script>
-
 <% semantic_form_for @attachment,:html => { :multipart => true }   do |form| %>
 	<% form.inputs do %>
 		<%= form.input :attachment, :as=>:file,:hint => "Click the 'Browse...' button to upload a document" %>
