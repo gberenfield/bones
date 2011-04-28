@@ -9,22 +9,14 @@ form.formtastic fieldset ol li p.inline-hints { color:#333; }
 
 --------------------------------------------------------------------------------------------------*/
 
-/*
-Ok not using for formtastic strictly but adding this override for jquery-lwrte so these editing areas
-line up with formtastic forms
-
-*/
-.rte-zone,.wysiwyg {
-	border: 0.3em solid #5D463D;
-	font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;
-	font-size:1em;
-	width: 100px;
-	padding: 0.7em 0.6em 0.6 em 1em;
-	-moz-border-radius: 0.3em;
-	-webkit-border-radius: 0.3em;
-    display: inline-block;
+form.formtastic {
+	padding-top: 15px;
+	-moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    background-color: silver;
 }
-form.formtastic  fieldset ol li div.rte-zone div.rte-toolbar ul li select {
+
+form.formtastic fieldset ol li div.rte-zone div.rte-toolbar ul li select {
 	width: 80px;
 	font-size: 1em;
 	border: 1px solid black;
@@ -36,14 +28,17 @@ form.formtastic li {
     list-style-type: none;
     margin: 0.7em;
 }
+
+form.formtastic .inputs {
+    background-color: #a7b2bf;
+}
 form.formtastic fieldset legend {
-	-moz-border-radius: 0.4em;
-	-webkit-border-radius: 0.4em;
 	width: 100%;
-    color: #ecb269;
-    background-color: #626262;
+    color: black;
+    background-color: silver;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
+    margin-bottom: 1em;
 }
 form.formtastic fieldset legend span {
     padding-left: 1em;
@@ -67,11 +62,11 @@ form.formtastic li.file input,
 form.formtastic fieldset ol li.password input {
 	-moz-border-radius: 0.4em;
 	-webkit-border-radius: 0.4em;
-	background: #5480bd;
-	font-size:1.4em;
-	color:#FFF;
+	background: #e3cca9;
+	font-size:1.3em;
+	color: black;
 	font-family:Tahoma, arial, verdana, courier;
-	width:20em;
+	width:45em;
 	height:1.9em;
 	padding: 0.7em 0.6em 0.6 em 1em;
 	border: 0.2em solid #5D463D;
@@ -112,4 +107,38 @@ form.formtastic li.commit input
 	margin-left: 8.6em;
 	background-color: #ecb269;
   	margin-top: 1em;
+}
+
+
+form.formtastic.location fieldset ol li.string input,
+form.formtastic.location fieldset ol li.numeric input,
+form.formtastic.location li.string input,
+form.formtastic.location fieldset ol li select,
+form.formtastic.location li.file input,
+form.formtastic.location fieldset ol li.password input {
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	background: #e3cca9;
+	font-size:0.8em;
+	color: black;
+	font-family:Tahoma, arial, verdana, courier;
+	width:25em;
+	height:1.9em;
+	border: 0.2em solid #5D463D;
+    margin-top: .4em;
+}
+
+
+form.formtastic.location li.commit input
+ {
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	color: black;
+	font-size:1.0em;
+	font-family:Tahoma, arial, verdana, courier;
+	border:0.3em solid #5D463D;
+	margin-left: 4.2em;
+	background-color: #ecb269;
+  	margin-top: .4em;
+    padding: 0.7em 0.3em 0.7em .3em;
 }

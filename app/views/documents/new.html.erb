@@ -1,0 +1,18 @@
+<% @use_dynamic=true %>
+<% title "New Documents" %>
+
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"document_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+	<%= render :partial => 'form' %>
+
+	<p><%= link_to "Back to List", documents_path %></p>
+</div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>

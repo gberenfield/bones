@@ -1,0 +1,85 @@
+<% @use_dynamic=true %>
+<% title "Documents" %>
+
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"document_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+	<table id="thegrid"></table>
+	<div id="pager"></div>
+</div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+
+	function bottom_buttons(){
+		$("#thegrid").jqGrid('navButtonAdd','#pager',{ 
+			caption: "Columns", title: "Reorder Columns", 
+			onClickButton : function (){ 
+				$("#thegrid").jqGrid('columnChooser'); 
+			}
+		});
+	
+		$("#thegrid").jqGrid('navButtonAdd',"#pager",{caption:"Toggle",
+			title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s', 
+			onClickButton:function(){ $("#thegrid")[0].toggleToolbar() } 
+		});
+
+		$("#thegrid").jqGrid('navButtonAdd',"#pager",{
+			caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh', 
+			onClickButton:function(){ $("#thegrid")[0].clearToolbar() } 
+		});
+
+  	$("#thegrid").jqGrid('navButtonAdd',"#pager",{ // SHOW button
+  	  caption:"Show",title:"Show Selected Document",
+  		buttonicon :'ui-icon-arrow-4',
+  		onClickButton:function(){ 
+  			if (BONES.lastsel!=" ") {
+  				location.href="/documents/"+BONES.lastsel;
+  			}
+  			else {alert ("You need to select a Document to view!");}
+  			return false
+  		}
+  	});
+
+		$("#thegrid").jqGrid('gridResize',{minWidth:350,maxWidth:1000,minHeight:100, maxHeight:1024});	
+		$("#thegrid").jqGrid('filterToolbar');
+	}
+	
+	function myselectrow(id){ 
+  	if((id) && (id!==BONES.lastsel)){ 
+  		if (BONES.lastsel) {
+  			jQuery('#thegrid').jqGrid('restoreRow',BONES.lastsel);
+  		}
+  		BONES.lastsel=id; 
+  	} 
+  	jQuery('#thegrid').jqGrid('editRow',id,true,BONES.pickdates,'','','',BONES.updated_ok);
+  }
+  
+	BONES.userights();
+
+	var cnames=['rid','thumb','file_name','description','comments'];
+	var cmodel=[
+		{name:'rid',index:'id', width:1,hidden:true,hidedlg:true,sortable:false,editable:true},
+		{name:'thumb', index:'document_url_thumb', width:40,sortable:false},
+		{name:'document_file_name', index:'document_file_name', width:100,sortable:true},
+		{name:'description', index:'description', width:160, align:'left',sortable:true}, 
+		{name:'comments', index:'comments', editable:true,sorttype:'text',width:100}
+		];
+
+	BONES.buildGrid("#thegrid",cnames,cmodel,{
+		caption:'Documents',
+		sortname:"document_file_name",
+		sortdir:"asc",
+		buildbuttons:bottom_buttons,
+    onselrow: myselectrow
+	});
+
+</script>
+<style>
+	/*This simple little class change allows jqGrid 3.6.2 to wrap text cells!*/
+	.ui-jqgrid tr.jqgrow td { white-space: normal; }
+</style>

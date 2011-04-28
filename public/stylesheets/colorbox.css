@@ -50,7 +50,7 @@
     Colorbox preloads navigation hover classes to account for this.
     
     !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
-    while regular CSS background colorbox/images are relative to the CSS document.
+    while regular CSS background images are relative to the CSS document.
 */
 .cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=colorbox/images/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
 .cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=colorbox/images/internet_explorer/borderTopCenter.png, sizingMethod='scale');}

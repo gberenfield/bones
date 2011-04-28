@@ -1,46 +1,42 @@
-source :gemcutter
+source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3-ruby', :require => 'sqlite3'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
+gem 'rails', '>=3.0.6'
+gem 'sqlite3'
 gem "paperclip",">=2.3.3"  # attachments
-gem "devise", ">=1.1rc2" # replacing with devise instead of authlogic
-gem 'formtastic', :git => "git://github.com/justinfrench/formtastic.git", :branch => 'rails3'
-gem 'will_paginate', '>=3.0.pre'
+gem "devise"
+gem "formtastic", ">=1.1.0"
+gem "will_paginate",">=3.0.pre2"
+gem "blueprintr"
 
-
-group :development do
-  # gem "linecache19"
-  # gem install linecache19 -- --with-ruby-include=/Users/mc/.rvm/src/ruby-1.9.2-rc2
-  # gem install ruby-debug-base19 -- --with-ruby-include=/Users/mc/.rvm/src/ruby-1.9.2-rc2
-  
-  # gem "ruby-debug-base19"
-  # gem "ruby-debug19"
-  gem "ruby-debug"
+group :development,:test do
+  gem "linecache19"
+  gem "ruby-debug-base19"
+  gem "ruby-debug19"
+  gem "wirble"
+  gem "hirb"
+  gem "flyrb"
+  gem "awesome_print"
+  gem "utility_belt"
   gem 'capistrano'
-  gem "rspec-rails",    ">=2.0.0.beta.19"
-  gem "cucumber-rails", ">=0.3.2"
-  gem "capybara",       ">=0.3.8"
-  gem "jasmine"
-  gem "database_cleaner"
-  gem "spork"
-  gem "rcov"
-  gem "machinist"
-  gem "forgery"
-  gem "mocha"
-  gem "autotest-growl"
+  gem 'ruby-prof'
+  gem 'rails-erd'
   gem "launchy"
-end 
-
-
-group :test do
+  gem "database_cleaner"
+  gem "jasmine", ">=1.0.2.0"
+  gem "jasmine-fixtures",:git=>"git://github.com/pivotal-casebook/jasmine-fixtures.git"
+  gem "autotest-fsevent"
+  gem "autotest-standalone"
   gem "autotest-rails"
-  gem "autotest"  
+  gem "autotest"
+  gem "autotest-growl"
+  gem "rspec"
+  gem "rspec-rails", ">= 2.4"
+  gem "cucumber-rails"
+  gem "capybara", ">=0.3.8"
+  gem "webrat"
+  gem "spork", ">=0.9.0.rc2"
+  gem "machinist","1.0.6"
+  gem "forgery"
+  gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
+  gem "metrical"
 end

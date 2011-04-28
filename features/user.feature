@@ -51,17 +51,12 @@ Feature: Managing Users
 	  When I press "Update User"
 	  Then I should not see "Successfully updated user."
 	
-	# @javascript
-	# Scenario: Delete a user
-	#   Given I am an authenticated admin user
-	# 	And I have a user with an e-mail "who@ami.org"
-	# 	And I go to "the list of users"
-	# 	When I follow "Destroy"
-	# 	# And I follow "Are you sure?"
-	# 	And I click "OK"
-	#   Then I should see "Successfully destroyed user."
-	
-	# postponing this test due to lack of capybara support.. see http://github.com/jnicklas/capybara/issues/issue/12
-	
-	
-	
+  @javascript
+  Scenario: Delete a user
+    Given I am an authenticated admin user
+    And I have a user with an e-mail "who@ami.org"
+    And I view a user with an e-mail of "who@ami.org"
+    And I am going to confirm all js popups on this page
+    When I follow "Destroy"
+    Then I should see "Successfully destroyed user."
+    

@@ -1,3 +1,0 @@
-module AttachmentsHelper
-  
-end

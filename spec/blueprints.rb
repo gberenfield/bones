@@ -19,7 +19,7 @@ User.blueprint(:admin) do
   editor {true}
 end
 
-Attachment.blueprint do
-  attachment_file_name { Forgery::Basic.text }
+Document.blueprint do
+  document_file_name { Forgery::Basic.text }
   description { Forgery::LoremIpsum.text }  
 end

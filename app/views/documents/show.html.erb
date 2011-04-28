@@ -1,0 +1,40 @@
+<% @use_dynamic=true %>
+<% title "Documents" %>
+
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"document_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+
+	<p>
+	  <%= link_to image_tag(@document.document.url(:small)), @document.document.url, :target=>"_blank"  %>
+	  <%= link_to "Original Document", @document.document.url,:target=>"_blank" %>
+	</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%=h @document.description %>
+	</p>
+	<p>
+	  <strong>Document Date:</strong>
+	  <%=h @document.document_date %>
+	</p>
+
+	<p>
+	  <strong>Comments:</strong>
+	<hr>
+	  <%= @document.comments %>
+	</p>
+	<% if is_editor %>
+		<p>
+		  <%= link_to "Edit", edit_document_path(@document) %> |
+		  <%= link_to "Destroy", @document, :confirm => 'Are you sure?', :method => :delete %> 
+		</p>
+	<% end %>
+</div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>

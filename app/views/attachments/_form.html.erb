@@ -1,9 +1,0 @@
-<% semantic_form_for @attachment,:html => { :multipart => true }   do |form| %>
-	<% form.inputs do %>
-		<%= form.input :attachment, :as=>:file,:hint => "Click the 'Browse...' button to upload a document" %>
-		<%= form.input :description,:hint => "A one-line description of the file goes here" %>
-		<%= form.input :comments, :required => false, :hint => "Detailed comments go here",:input_html => {:class=>"rte",:style=>"clear:none;float:left;" } %>
-		<%= form.input :attachment_date,:as=>:string, :hint => "The date the document is effective (e.g. July receipts are July 1, 2009)",:input_html => {:class=>"mydatepicker" } %>
-		<%= form.buttons :commit %>
-	<% end %>
-<% end %>

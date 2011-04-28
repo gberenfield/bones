@@ -23,11 +23,13 @@ Given /^I am an authenticated admin user$/ do
   click_button("Sign in")      
 end
 
-When /^I delete the user$/ do
-  visit user_path(@user2.id),"data-method"=>:delete
-  # save_and_open_page
+When /^I view a user with an e\-mail of "([^"]*)"$/ do |email|
+  user = User.where("email = ?",email).first
+  visit user_path(user)
 end
 
-When /^I click "([^"]*)"$/ do |arg1|
-  page.driver.assertConfirmation('Are you sure?')
+When /^I am going to confirm all js popups on this page$/ do
+  # hackish, but not unreasonable.
+  page.evaluate_script("window.alert = function(msg) { return true; }")
+  page.evaluate_script("window.confirm = function(msg) { return true; }")
 end

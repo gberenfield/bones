@@ -33,14 +33,14 @@ var BONES = {
 		return -1;	// not found!
 	},
 	updated_ok:function(id){
-		$('#header_container').html("<h1>Attachments</h1><div id='flash_notice'>Record was successfully updated.</div>");
+		$('#header_container').html("<h1>Documents</h1><div id='flash_notice'>Record was successfully updated.</div>");
 		$('#flash_notice').fadeTo(4000,0.5);
 		return true
 	},
  	buildGrid:function(grid, columnNames,columnModel,options){
 		currentGrid = grid;
 		options = options || {}
-		var dataurl = options["dataurl"] || "/attachments/grid";
+		var dataurl = options["dataurl"] || "/documents/grid";
 		var caption = options["caption"] || "myGrid";
 		var role = options["role"] || false;
 		var sortname = options["sortname"] || "production_date";

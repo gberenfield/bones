@@ -1,15 +1,12 @@
 Bones::Application.routes.draw do
-
   devise_for :users
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  # match "login" =>"user_sessions#new"
-  # match "logout" =>"user_sessions#destroy"
+  match "/documents/updategrid" => "documents#updategrid"  
+  match "/documents/grid" => "documents#grid"  
 
-  match "/attachments/updategrid" => "attachments#updategrid"  
-  match "/attachments/grid" => "attachments#grid"  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -24,12 +21,12 @@ Bones::Application.routes.draw do
   # Sample resource route with options:
   #   resources :products do
   #     member do
-  #       get :short
-  #       post :toggle
+  #       get 'short'
+  #       post 'toggle'
   #     end
   #
   #     collection do
-  #       get :sold
+  #       get 'sold'
   #     end
   #   end
 
@@ -38,15 +35,15 @@ Bones::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-  resources :attachments
+
+  resources :documents
   resources :users
-  # resource :user_session
 
   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments
   #     resources :sales do
-  #       get :recent, :on => :collection
+  #       get 'recent', :on => :collection
   #     end
   #   end
 
@@ -59,9 +56,13 @@ Bones::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "attachments#index"
   # root :to => "welcome#index"
 
+  root :to => "documents#index"
+  
   # See how all your routes lay out with "rake routes"
 
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-	<title><%= h(yield(:title) || "Untitled") %></title>
+<html>
+  <head>
+		<title><%= h(yield(:title) || "BONES") %></title>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/humanity/jquery-ui.css" type='text/css' rel='stylesheet' />
 
-	<%= stylesheet_link_tag 'blueprint/screen', 'jquery-ui-1.8.2.custom',
-	'application','formtastic',	'formtastic_changes','colorbox',
-	'ui.jqgrid.css', :cache => true, :recursive => true %>
-	
-	<%= javascript_include_tag 'jquery-1.4.2.min',"jquery-ui-1.8.2.custom.min.js","rails.js",
-	"jquery.colorbox-1.3.6.min", "grid.locale-en.js", "jquery.jqGrid.min", 
-	"application.js",  :cache => true, :recursive => true %>
+		<%= stylesheet_link_tag 'screen', 'application','formtastic','formtastic_changes',"colorbox",'ui.jqgrid.css',
+		:cache => "all", :recursive => true %> 
 
-	<%= csrf_meta_tag %>
+    <%= csrf_meta_tag %> <!-- rails 3 unobtrusive js support along with rails.js -->
+
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>    
+    <%= javascript_include_tag "jquery.colorbox-min", "grid.locale-en.js", "jquery.jqGrid.min", "rails.js",
+	 		"application.js" ,:cache => "all", :recursive => true	%> 
 	
-	<%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
-</head>
+    <%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
+  </head>
   <body>
-    <div class="container" id="container">
+		<div class="container">
     <!-- <div class="container showgrid"> -->
-			<%= render 'layouts/dynamic_header' unless @use_dynamic %>
+			<%= render 'layouts/dynamic_header' unless @hide_dynamic %>
 			&nbsp;
 			<div class="span-24 last">
 				<div id="main_container">	<!-- defined in application.css -->

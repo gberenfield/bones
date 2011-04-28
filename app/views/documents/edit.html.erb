@@ -1,0 +1,21 @@
+<% @use_dynamic=true %>
+<% title "Edit Documents" %>
+
+<div class="span-24 sidebar_container last">
+	<div class="span-24 padabit">
+		<%= render :partial=>"document_menu" %>
+	</div>
+</div>
+<div class="span-24 padown last">&nbsp;</div>
+<div id="containsgrid" class="span-24">
+
+	<%= render :partial => 'form' %>
+
+	<p>
+	  <%= link_to "Show", @document %>
+	</p>
+</div>
+
+<script>
+	$('#container').prepend('<%= escape_javascript render("layouts/dynamic_header") %>');  
+</script>
