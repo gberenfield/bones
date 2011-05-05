@@ -9,136 +9,128 @@ form.formtastic fieldset ol li p.inline-hints { color:#333; }
 
 --------------------------------------------------------------------------------------------------*/
 
-form.formtastic {
-	padding-top: 15px;
-	-moz-border-radius: 12px;
-    -webkit-border-radius: 12px;
-    background-color: silver;
+form.formtastic  {
+  background: #B59B7F;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
 }
 
-form.formtastic fieldset ol li div.rte-zone div.rte-toolbar ul li select {
-	width: 80px;
-	font-size: 1em;
-	border: 1px solid black;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-
-}
-form.formtastic li {
-    list-style-type: none;
-    margin: 0.7em;
+form.formtastic fieldset {
+  border: none;
+  margin-bottom: 10px;
 }
 
-form.formtastic .inputs {
-    background-color: #a7b2bf;
-}
-form.formtastic fieldset legend {
-	width: 100%;
-    color: black;
-    background-color: silver;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    margin-bottom: 1em;
-}
-form.formtastic fieldset legend span {
-    padding-left: 1em;
-}
-form.formtastic fieldset ol li label,
-form.formtastic li label {
-    list-style-type: none;
-	float:left;
-	font-size: 1.2em;
-	width:7em;
-  	text-align: right;
-	padding-right: 1em;
-	padding-top: 0.2em;
-    list-style-image: none;
-}
-form.formtastic fieldset ol li.string input,
-form.formtastic fieldset ol li.numeric input,
-form.formtastic li.string input,
-form.formtastic fieldset ol li select,
-form.formtastic li.file input,
-form.formtastic fieldset ol li.password input {
-	-moz-border-radius: 0.4em;
-	-webkit-border-radius: 0.4em;
-	background: #e3cca9;
-	font-size:1.3em;
-	color: black;
-	font-family:Tahoma, arial, verdana, courier;
-	width:45em;
-	height:1.9em;
-	padding: 0.7em 0.6em 0.6 em 1em;
-	border: 0.2em solid #5D463D;
-}
-form.formtastic fieldset ol li select {
-    width: 20.4em;
-}
-form.formtastic fieldset ol li p.inline-hints {
-	padding-left:9.8em;
-    font-style: italic;
-    text-align: left;
-    margin: 0px;
+form.formtastic legend {
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px #c0c0c0;
 }
 
-form.formtastic fieldset ol li.boolean label{
-	padding-left:8em;
-	padding-top: 0.2em;
-	text-align: left;
-	width:20em;
+/*form.formtastic > fieldset > legend:before {
+  content: "Step " counter(fieldsets) ": ";
+  counter-increment: fieldsets;
 }
-form.formtastic fieldset ol li.boolean label input {
-	margin-top:  0em;
-	margin-bottom:  1em;
-	padding-top: 0.2em;
+*/
+form.formtastic ol li {
+  background: #b9cf6a;
+  background: rgba(255,255,255,.3);
+  border-color: #e3ebc3;
+  border-color: rgba(255,255,255,.6);
+  border-style: solid;
+  border-width: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
 }
-form.formtastic fieldset.buttons {
-	padding-left: 5.2em;
+form.formtastic ol ol li {
+  background: none;
+  border: none;
+  float: left;
 }
-form.formtastic li.commit input
- {
-	-moz-border-radius: 0.4em;
-	-webkit-border-radius: 0.4em;
-	color: black;
-	font-size:1.1em;
-	font-family:Tahoma, arial, verdana, courier;
-	border:0.3em solid #5D463D;
-	padding: 0.7em 1em;
-	margin-left: 8.6em;
-	background-color: #ecb269;
-  	margin-top: 1em;
+
+form.formtastic label {
+  float: left;
+  font-size: 13px;
+  width: 110px;
+}
+form.formtastic fieldset fieldset label {
+  background:none no-repeat left 50%;
+  line-height: 20px;
+  padding: 0 0 0 30px;
+  width: auto;
+}
+
+form.formtastic input:not([type=radio]),
+form.formtastic textarea {
+  background: #ffffff;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font: 13px Georgia, "Times New Roman", Times, serif;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+form.formtastic input:not([type=submit]):focus,
+form.formtastic textarea:focus {
+  background: #eaeaea;
+}
+form.formtastic input[type=radio] {
+  float: left;
+  margin-right: 5px;
 }
 
 
-form.formtastic.location fieldset ol li.string input,
-form.formtastic.location fieldset ol li.numeric input,
-form.formtastic.location li.string input,
-form.formtastic.location fieldset ol li select,
-form.formtastic.location li.file input,
-form.formtastic.location fieldset ol li.password input {
-	-moz-border-radius: 0.4em;
-	-webkit-border-radius: 0.4em;
-	background: #e3cca9;
-	font-size:0.8em;
-	color: black;
-	font-family:Tahoma, arial, verdana, courier;
-	width:25em;
-	height:1.9em;
-	border: 0.2em solid #5D463D;
-    margin-top: .4em;
+form.formtastic button {
+  background: #384313;
+  border: none;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  display: block;
+  font: 18px Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  margin: auto;
+  padding: 7px 25px;
+  text-shadow: 0 1px 1px #000000;
+  text-transform: uppercase;
+}
+form.formtastic button:hover {
+  background: #1e2506;
+  cursor: pointer;
 }
 
+form.formtastic fieldset > ol > li.string input, 
+form.formtastic fieldset > ol > li.password input, 
+form.formtastic fieldset > ol > li.numeric input, 
+form.formtastic fieldset > ol > li.email input, 
+form.formtastic fieldset > ol > li.url input, 
+form.formtastic fieldset > ol > li.phone input, 
+form.formtastic fieldset > ol > li.search input,
+form.formtastic fieldset.inputs > ol > li > select {
 
-form.formtastic.location li.commit input
- {
-	-moz-border-radius: 0.4em;
-	-webkit-border-radius: 0.4em;
-	color: black;
-	font-size:1.0em;
-	font-family:Tahoma, arial, verdana, courier;
-	border:0.3em solid #5D463D;
-	margin-left: 4.2em;
-	background-color: #ecb269;
-  	margin-top: .4em;
-    padding: 0.7em 0.3em 0.7em .3em;
+}
+
+form.formtastic fieldset.inputs > ol > li > select {
+  font: 13px Georgia, "Times New Roman", Times, serif;
+/*  font-weight: bold;*/
+  line-height: 18px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  width: 250px;  
 }

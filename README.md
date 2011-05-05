@@ -1,6 +1,14 @@
+Bones
+=====
+ .-.               .-.
+(   `-._________.-'   )
+ >=     _______     =<
+(   ,-'`       `'-,   )
+ `-'               `-'
+  
 Skeletal Rails App for Rails 3
 
-There is an Attachment-Controller/Model/Views as an example of how to use everything in practice
+There is an Attachment-Controller/Model/Views as an example of how to use everything in practice.
 
 Just globally find+remove all "Attachment" files and references, or you may like having some ready-baked attachment handling!
 
