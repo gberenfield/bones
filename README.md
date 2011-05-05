@@ -17,14 +17,20 @@ Just globally find+remove all "Attachment" files and references, or you may like
 - colorbox 1.3.15
 
 
-TESTING
-=======
+Cucumber Integration Tetsts
+===========================
 
-- in 1 terminal session type "spork cuc"
-- in another terminal session type "autotest" for specs or "cucumber" for cucumber specs
+- in one terminal session type "spork cuc"
+- in another terminal session type "cucumber"
+
+RSpec Tests
+===========
+
+- in one terminal session type "spork"
+- in another terminal session type "autotest"
 
 
-GIT / GitHUB
+Git / Github
 ============
 
   1. mkdir <app_name>
@@ -44,4 +50,4 @@ Database starts off with Sqlite3 db   (this is for development, iirc!)
 
   1. type "bundle" for gems
   2. rake db:setup (loads seed 'admin' account with password 'pass')
-
+  
