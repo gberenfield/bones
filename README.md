@@ -1,9 +1,8 @@
 My Skeletal Rails App for Rails 3
 
-I have created an "AttachmentController/Model/Views" as an example		
-of  how to  use everything  in  practice (basic  CRUD stuff). Just		
-globally find+remove  all "Attachment" files and references, or you		
-may like having some ready-baked attachment handling!
+I have created an "AttachmentController/Model/Views" as an example of how to use everything in practice (basic CRUD stuff). 
+
+Just globally find+remove all "Attachment" files and references, or you may like having some ready-baked attachment handling!
 
 - ruby-1.9.2-p180
 - rails 3.0.7+ (gem)
