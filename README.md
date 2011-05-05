@@ -1,9 +1,9 @@
 My Skeletal Rails App for Rails 3
 
-	I have created an "AttachmentController/Model/Views" as an example		
-	of  how to  use everything  in  practice (basic  CRUD stuff). Just		
-	globally find+remove  all "Attachment" files and references, or you		
-	may like having some ready-baked attachment handling!
+I have created an "AttachmentController/Model/Views" as an example		
+of  how to  use everything  in  practice (basic  CRUD stuff). Just		
+globally find+remove  all "Attachment" files and references, or you		
+may like having some ready-baked attachment handling!
 
 - ruby-1.9.2-p180
 - rails 3.0.7+ (gem)
@@ -28,15 +28,14 @@ TESTING
 GIT / GitHUB
 ============
 
-  mkdir <app_name>
-  cd <app_name>
-	*  rm -r .git (this is to remove bones's git info for github - ok, for me, only ;)
-  git init
-  touch README
-  git add README
-  git commit -m 'first commit'
-  git remote add origin git@github.com:<username>/<app_name>.git
-  git push origin master
+  1. mkdir <app_name>
+  2. cd <app_name>
+  3. git init
+  4. touch README.md
+  5. git add README.md
+  6. git commit -m 'first commit'
+  7. git remote add origin git@github.com:<username>/<app_name>.git
+  8. git push origin master
 
 
 DATABASE
