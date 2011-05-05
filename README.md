@@ -59,4 +59,8 @@ Database starts off with Sqlite3 db   (this is for development, iirc!)
 
   1. type "bundle" for gems
   2. rake db:setup (loads seed 'admin' account with password 'pass')
-  
+
+TODO
+====
+
+Turn this puppy into a templated meta-skeleton.
