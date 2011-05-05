@@ -33,13 +33,13 @@ RSpec Tests
 Git / Github
 ============
 
-  1. mkdir <app_name>
-  2. cd <app_name>
+  1. mkdir \<app_name\>
+  2. cd \<app_name\>
   3. git init
   4. touch README.md
   5. git add README.md
   6. git commit -m 'first commit'
-  7. git remote add origin git@github.com:<username>/<app_name>.git
+  7. git remote add origin git@github.com:\<username\>/\<app_name\>.git
   8. git push origin master
 
 
