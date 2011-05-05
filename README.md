@@ -1,11 +1,11 @@
 Bones
 =====
-     .-.               .-.
-    (   `-._________.-&#039;   )
-     &gt;=     _______     =&lt;
-jgs (   ,-&#039;`       `&#039;-,   )
-     `-&#039;               `-&#039;
- 
+ .-.               .-.
+(   `-._________.-'   )
+ >=     _______     =<
+(   ,-'`       `'-,   )
+ `-'               `-'
+
 Skeletal Rails App for Rails 3
 
 There is an Attachment-Controller/Model/Views as an example of how to use everything in practice.
