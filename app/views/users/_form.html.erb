@@ -1,7 +1,13 @@
-<%= semantic_form_for @user do |form| %>
-	<%= form.inputs do %>
-		<%= form.inputs :login, :email, :password, :password_confirmation %>
-		<%= form.inputs :editor,:admin %>
-		<%= form.buttons :commit %>
-	<% end %>
+<div class="prepend-4 span-16">
+  <%= semantic_form_for @user,:html => { :multipart => true } do |form| %>
+  	<%= form.inputs :name=>"New User" do %>
+  		<%= form.input :login %>
+  		<%= form.input :email %>
+  		<%= form.input :password %>
+  		<%= form.input :password_confirmation %>
+  		<%= form.input :editor %>
+  		<%= form.input :admin %>
+  		<%= form.buttons :commit %>
+  	<% end %>
 <% end %>
+</div>

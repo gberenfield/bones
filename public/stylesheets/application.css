@@ -82,6 +82,12 @@ a.myajaxbutton {
 	margin-bottom: 2px;
 }
 
+.to_item {
+    float: none;
+    clear: both;
+    display: block;
+}
+
 .orderchanged {
 	color: #3e821a;
 	font-style: italic;
@@ -104,7 +110,7 @@ a.myajaxbutton {
 	margin-top: 0px;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 10px 30px;
+    padding: 10px 30px 20px;
 }
 .myfilterbar {
 	-webkit-box-shadow: 2px 2px 4px  ;
@@ -148,33 +154,47 @@ a.myajaxbutton {
 	width: 100%;
 }
 
+.pullupbottom  {
+	margin-bottom: -13px;
+}
 .paddown {
-    padding-top: 12px;
-	padding-bottom: 12px;    
+    padding-top: 8px;
+	padding-bottom: 8px;    
 }
 .padabit {
     padding: 12px;
 }
 
-#containsgrid{
+#containsgrid,#containsgrid2 {
     clear: both;
     margin-top: 10px;
     display: block;
     float: none;
 }
 .sidebar_container {
-	-webkit-box-shadow: 2px 2px 4px  ;
-	-moz-box-shadow: 2px 2px 4px ;
-	box-shadow: 2px 2px 4px ;	
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 	background-color: rgba(226,204,164,0.75);
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	border: 1px solid #000;
+	border: 1px none #000;
 	padding: 0px;
-	/*  border: 2px solid #b4cbe2;*/
-	/*padding: 10px 10px 20px;*/
 }
 .sidebar_container a {
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+   -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    -x-system-font: none;
+      font-family: Helvetica Neue,Arial,Sans-serif;
+    font-size: 1.0em;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
 	text-decoration: none;
 	background-color: orange;
 	width: 120px;
@@ -183,13 +203,21 @@ a.myajaxbutton {
 	padding: 3px;
 	margin-top: 2px;
 	margin-bottom: 2px;
-	font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/* font: small-caps 1.0em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; */
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
     text-align: center;
 }
 .sidebar_container a:hover {
 	color: white;  
+}
+
+.sidebar_container h3 {
+    display: inline;
+    vertical-align: top;
+    float: left;
+    padding-top: 6px;
+    padding-right: 5px;
 }
 #flash_notice, #flash_error {
 	-moz-border-radius: 5px;
@@ -211,6 +239,21 @@ a.myajaxbutton {
 
 .fieldWithErrors {
 	display: inline;
+}
+.terminated {
+    text-decoration: line-through;
+}
+.license_overdue {
+    font-weight: bold;
+    color: red;
+}
+.physical_overdue {
+    font-weight: bold;
+    color: green;
+}
+.mvr_overdue {
+    color: blue;
+    font-weight: bold;
 }
 
 #errorExplanation {
@@ -247,9 +290,4 @@ a.myajaxbutton {
 #errorExplanation ul li {
 	font-size: 12px;
 	list-style: disc;
-}
-/*My jquery-ui overrides for the jquery-ui hot-sneaks theme*/
-.ui-state-default, .ui-widget-content .ui-state-default {
-	border: 1px solid #92a9c0; background: #b4cbe2;
-	font-weight: bold; color: #333333; 
 }
