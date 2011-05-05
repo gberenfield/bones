@@ -11,7 +11,7 @@ Just globally find+remove all "Attachment" files and references, or you may like
 - formtastic (gem)
 - paperclip (gem)
 - blueprintr (gem)
-- jQuery 1.5.2
+- jQuery 1.6
 - jquery-ui 1.8.12
 - jqgrid 4
 - colorbox 1.3.15
