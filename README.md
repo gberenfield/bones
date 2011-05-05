@@ -28,15 +28,15 @@ TESTING
 GIT / GitHUB
 ============
 
-mkdir <app_name>
-cd <app_name>
+  mkdir <app_name>
+  cd <app_name>
 	*  rm -r .git (this is to remove bones's git info for github - ok, for me, only ;)
-git init
-touch README
-git add README
-git commit -m 'first commit'
-git remote add origin git@github.com:<username>/<app_name>.git
-git push origin master
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:<username>/<app_name>.git
+  git push origin master
 
 
 DATABASE
@@ -44,6 +44,6 @@ DATABASE
 
 Database starts off with Sqlite3 db   (this is for development, iirc!)
 
-1. type "bundle" for gems
-2. rake db:setup (loads seed 'admin' account with password 'pass')
+  1. type "bundle" for gems
+  2. rake db:setup (loads seed 'admin' account with password 'pass')
 

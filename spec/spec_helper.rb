@@ -3,18 +3,7 @@ require 'spork'
 
 Spork.prefork do
   
-  require 'simplecov'
-  SimpleCov.start 'rails' do
-    add_filter '/test/'
-    add_filter '/config/'
-    add_filter '/spec/'
-    add_filter '/vendor/'
 
-    add_group 'Controllers', 'app/controllers'
-    add_group 'Models', 'app/models'
-    add_group 'Helpers', 'app/helpers'
-    add_group 'Libraries', 'lib'
-  end
 
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
@@ -59,6 +48,18 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
+  require 'simplecov'
+  SimpleCov.start 'rails' do
+    add_filter '/test/'
+    add_filter '/config/'
+    add_filter '/spec/'
+    add_filter '/vendor/'
+
+    add_group 'Controllers', 'app/controllers'
+    add_group 'Models', 'app/models'
+    add_group 'Helpers', 'app/helpers'
+    add_group 'Libraries', 'lib'
+  end
   
 end
 
@@ -72,30 +73,4 @@ end
 # - These instructions should self-destruct in 10 seconds.  If they don't,
 #   feel free to delete them.
 #
-
-
-
-
-# Rspec2 + Spork not compatible as of 2010-07-09
-
-# This file is copied to ~/spec when you run 'ruby script/generate rspec'
-# from the project root directory.
-
-RSpec.configure do |config|
-  # == Mock Framework
-  #
-  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
-  #
-  # config.mock_with :mocha
-  # config.mock_with :flexmock
-  # config.mock_with :rr
-  config.mock_with :rspec
-
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, comment the following line or assign false
-  # instead of true.
-  config.use_transactional_fixtures = true
-end
 
