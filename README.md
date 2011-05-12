@@ -35,8 +35,7 @@ Cucumber Integration Tetsts
 RSpec Tests
 ===========
 
-- in one terminal session type "spork"
-- in another terminal session type "autotest"
+- now using guard so simply type "guard"
 
 
 Git / Github

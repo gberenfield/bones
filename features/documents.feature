@@ -31,7 +31,7 @@ Feature: Managing Documents
   Scenario: A user can create a document
     Given I'm a regular authenticated user
     And I go to "the list of documents"
-    When I follow "New Documents"
+    When I follow "New Document"
     And I attach the file "features/support/paperclip/wow.txt" to "document_document"
     And I fill in "document[description]" with "testing by upping app.css file"
     And I press "Create Document"
