@@ -24,18 +24,10 @@ group :development,:test do
   gem "database_cleaner"
   gem "jasmine", ">=1.0.2.0"
   gem "jasmine-fixtures",:git=>"git://github.com/pivotal-casebook/jasmine-fixtures.git"
-  
-  # hello guard
-  gem "rb-fsevent", :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem "rb-fsevent"
   gem "guard-spork"
   gem "guard-rspec"
   gem "growl"
-  
-  # bye autotest
-  # gem "autotest-fsevent"
-  # gem "autotest-standalone"
-  # gem "autotest-rails" # needed per https://github.com/rspec/rspec-rails/issues/314
-  # gem "autotest-growl"
   gem "rspec"
   gem "rspec-rails", ">= 2.4"
   gem "cucumber-rails"
