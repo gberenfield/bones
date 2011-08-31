@@ -2,8 +2,6 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
-  
-
 
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
@@ -40,7 +38,10 @@ Spork.prefork do
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, comment the following line or assign false
     # instead of true.
-    config.use_transactional_fixtures = true
+    config.use_transactional_fixtures = false
+    # machinist blueprint resets per https://github.com/notahat/machinist/tree/1.0-maintenance
+    config.before(:all)    { Sham.reset(:before_all)  }
+    config.before(:each)   { Sham.reset(:before_each) }
 
   end
   
