@@ -7,14 +7,14 @@ Bones
 (   ,-'`       `'-,   )
  `-'               `-'
 </pre>
-Skeletal Rails App for Rails 3
+Skeletal Rails App for Rails 3.1
 
 There is an Attachment-Controller/Model/Views as an example of how to use everything in practice.
 
 Just globally find+remove all "Attachment" files and references, or you may like having some ready-baked attachment handling!
 
-- ruby-1.9.2-p180
-- rails 3.0.7+ (gem)
+- ruby-1.9.2-p290
+- rails 3.1.0+ (gem)
 - devise (gem)
 - will_paginate (gem)
 - formtastic (gem)
