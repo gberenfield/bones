@@ -2,18 +2,12 @@
 <html>
   <head>
 		<title><%= h(yield(:title) || "BONES") %></title>
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/pepper-grinder/jquery-ui.css" type='text/css' rel='stylesheet' />
-		<%= stylesheet_link_tag 'screen', 'application','formtastic','formtastic_changes',"colorbox",'ui.jqgrid.css',
-		:cache => "all", :recursive => true %> 
 
-    <%= csrf_meta_tag %> <!-- rails 3 unobtrusive js support along with rails.js -->
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
 
-    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.6.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>    
-    <%= javascript_include_tag "jquery.colorbox-min", "grid.locale-en.js", "jquery.jqGrid.min", "rails.js",
-	 		"application.js" ,:cache => "all", :recursive => true	%> 
-	
-    <%= yield(:head) %>  <!-- would render any content_for :head that's defined within a different controller -->
+    <%= yield(:head) %>
   </head>
   <body>
 		<div class="container">
@@ -21,7 +15,7 @@
 			<%= render 'layouts/dynamic_header' unless @hide_dynamic %>
 			&nbsp;
 			<div class="span-24 last">
-				<div id="main_container">	<!-- defined in application.css -->
+				<div id="main_container">
 					<%= yield %>
 				</div>
 			</div>

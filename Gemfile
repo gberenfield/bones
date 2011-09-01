@@ -2,11 +2,20 @@ source 'http://rubygems.org'
 
 gem 'rails', '>=3.0.6'
 gem 'sqlite3'
-gem "paperclip",">=2.3.3"  # attachments
+gem "paperclip",">=2.3.3"
 gem "devise"
 gem "formtastic", ">=1.1.0"
 gem "will_paginate",">=3.0.pre2"
 gem "blueprintr"
+gem 'jquery-rails'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
 
 group :development,:test do
   gem "linecache19"
