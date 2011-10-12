@@ -1,19 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '>=3.0.6'
+gem 'rails',">=3.1.1"
 gem 'sqlite3'
-gem "paperclip",">=2.3.3"
+gem "paperclip"
 gem "devise"
-gem "formtastic", ">=1.1.0"
-gem "will_paginate",">=3.0.pre2"
+gem "formtastic"
+gem "will_paginate"
 gem "blueprintr"
 gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', ">= 3.1.4"
+  gem 'coffee-rails', ">= 3.1.1"
   gem 'uglifier'
 end
 
@@ -32,17 +32,17 @@ group :development,:test do
   gem "launchy"
   gem "database_cleaner"
   gem "jasmine", ">=1.0.2.0"
-  gem "jasmine-fixtures",:git=>"git://github.com/pivotal-casebook/jasmine-fixtures.git"
+  gem "jasmine-fixtures",">=0.1.7"
   gem "rb-fsevent"
   gem "guard-spork"
   gem "guard-rspec"
   gem "growl"
   gem "rspec"
-  gem "rspec-rails", ">= 2.4"
+  gem "rspec-rails"
   gem "cucumber-rails"
-  gem "capybara", ">=0.3.8"
+  gem "capybara"
   gem "webrat"
-  gem "spork", ">=0.9.0.rc2"
+  gem "spork", ">=0.9.0.rc9"
   gem "machinist","1.0.6"
   gem "forgery"
   gem 'simplecov', '>= 0.4.0', :require => false, :group => :test

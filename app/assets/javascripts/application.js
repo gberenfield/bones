@@ -3,7 +3,7 @@
 //= require jquery_ujs
 //= require jquery.colorbox-min
 //= require grid.locale-en
-//= require jquery.jqGrid.min
+//= require jquery.jqGrid.src
 //= require_self
 
 var lastsel,amiana,role,currentGrid;
