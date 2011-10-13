@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Bones::Application.config.secret_token = '47eda937953bb7510543f7e5c0123a53a511806fd3da2245cf19a32dd5e64e86fff1b92baf024733fb1d2cd71fc84c64c1855389b9d10270a285e1704ef27769'
+Bones::Application.config.secret_token = 'b7f80c2344c9bcb531d2c91f524191279bbf9b99780dec07e022d34e6ec3918af62f89ef52b6a5f78ab181a3ed59080b3e410fe603243d44b2ce1def3946228d'
