@@ -1,6 +1,7 @@
-jQuery ->
+$ ->
 
-  bottom_buttons = ->
+  BONES.bottom_buttons = ->
+
     $("#thegrid").jqGrid "navButtonAdd", "#pager", 
       caption: "Columns"
       title: "Reorder Columns"
@@ -22,6 +23,17 @@ jQuery ->
         $("#thegrid")[0].clearToolbar()
 
     $("#thegrid").jqGrid "navButtonAdd", "#pager", 
+      caption: "Edit"
+      title: "Edit Selected Document"
+      buttonicon: "ui-icon-pencil"
+      onClickButton: ->
+        unless BONES.lastsel == " "
+          location.href = "/documents/" + BONES.lastsel + "/edit"
+        else
+          alert "You need to select a Document to edit!"
+        false
+
+    $("#thegrid").jqGrid "navButtonAdd", "#pager", 
       caption: "Show"
       title: "Show Selected Document"
       buttonicon: "ui-icon-arrow-4"
@@ -39,17 +51,17 @@ jQuery ->
       maxHeight: 1024
 
     $("#thegrid").jqGrid "filterToolbar"
+    # end BONES.bottom_buttons
 
-  myselectrow = (id) ->
+  BONES.myselectrow = (id) ->
     if (id) and (id != BONES.lastsel)
       jQuery("#thegrid").jqGrid "restoreRow", BONES.lastsel  if BONES.lastsel
       BONES.lastsel = id
     jQuery("#thegrid").jqGrid "editRow", id, true, BONES.pickdates, "", "", "", BONES.updated_ok
 
-  BONES.userights()
 
-  cnames = [ "rid", "thumb", "file_name", "description", "comments" ]
-  cmodel = [ 
+  BONES.cnames = [ "rid", "thumb", "file_name", "description", "comments" ]
+  BONES.cmodel = [ 
     name: "rid"
     index: "id"
     width: 1
@@ -81,9 +93,24 @@ jQuery ->
     width: 100
   ]
 
-  BONES.buildGrid "#thegrid", cnames, cmodel, 
-    caption: "Documents"
-    sortname: "document_file_name"
-    sortdir: "asc"
-    buildbuttons: bottom_buttons
-    onselrow: myselectrow
+$(document).ready ->
+
+  $('.mydatepicker').datepicker
+    showButtonPanel: true
+    dateFormat: 'yy-mm-dd'
+
+  $('#flash_notice').fadeTo 4000, 0 if $("#flash_notice")
+
+  # BONES.amiana = BONES.current_user.admin
+  # $('#amiana').val(BONES.amiana)
+
+  # $('.admin').show if BONES.amiana
+
+  # BONES.userights
+
+  BONES.buildGrid '#thegrid', BONES.cnames, BONES.cmodel, 
+    caption: 'Documents'
+    sortname: 'document_file_name'
+    sortdir: 'asc'
+    buildbuttons: BONES.bottom_buttons
+    onselrow: BONES.myselectrow

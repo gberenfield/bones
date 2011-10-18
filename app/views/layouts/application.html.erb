@@ -4,15 +4,14 @@
 		<title><%= h(yield(:title) || "BONES") %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag params[:controller] unless params[:controller] == 'devise/sessions' %>
     <%= csrf_meta_tag %>
 
-    <%= javascript_include_tag params[:controller] unless params[:controller] == 'devise/sessions' %>
     <%= yield(:head) %>
   </head>
   <body>
 		<div class="container">
-    <!-- <div class="container showgrid"> -->
-			<%= render 'layouts/dynamic_header' unless @hide_dynamic %>
+      <%= render 'layouts/dynamic_header' unless @hide_dynamic %>
 			&nbsp;
 			<div class="span-24 last">
 				<div id="main_container">

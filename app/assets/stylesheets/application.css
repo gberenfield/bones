@@ -4,10 +4,9 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require jquery-ui-1.8.16.custom
  *= require screen
- *= require_self
+ *= require bones
  *= require formtastic
  *= require formtastic_changes
  *= require ui.jqgrid
- *= require bones
 */
 

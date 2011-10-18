@@ -8,6 +8,6 @@
 </div>
 <div class="span-3">
 	<div><%= current_user.email %></div>
-	<%= link_to "Users", users_path,:class=>"admin",:style=>"display:none;" %>
+	<%= link_to_if current_user.admin, "Users", users_path,:class=>"admin" %>
 	<%= link_to :Logout,destroy_user_session_path  %>
 </div>

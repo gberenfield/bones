@@ -8,12 +8,12 @@ gem "formtastic"
 gem "will_paginate"
 gem "blueprintr"
 gem 'jquery-rails'
+gem 'coffee-rails', ">= 3.1.1"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails', ">= 3.1.4"
-  gem 'coffee-rails', ">= 3.1.1"
   gem 'uglifier'
 end
 
@@ -31,8 +31,8 @@ group :development,:test do
   gem 'rails-erd'
   gem "launchy"
   gem "database_cleaner"
-  gem "jasmine", ">=1.0.2.0"
-  gem "jasmine-fixtures",">=0.1.7"
+  # gem "jasmine", ">=1.0.2.0"
+  # gem "jasmine-fixtures",">=0.1.7"
   gem "rb-fsevent"
   gem "guard-spork"
   gem "guard-rspec"

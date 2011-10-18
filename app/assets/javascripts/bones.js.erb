@@ -1,11 +1,15 @@
 var BONES = {
 
-  var lastsel,amiana,role,currentGrid;
+  lastsel : typeof lastsel!="undefined" ? lastsel : " " ,
+  amiana : typeof amiana!="undefined" ? amiana : false ,
+  role : typeof role!="undefined" ? role : " " ,
+  currentGrid : typeof currentGrid!="undefined" ? currentGrid : " ",
 
   userights:function(){
     amiana = (eval($("#amiana").val())); // am i an admin (or editor)
     var role = $("#marole").val();
   },
+
   white_space:function(str){
     if (str!=null)
       return (str.replace(/^\s*|\s*$/g,''));
@@ -117,34 +121,4 @@ var BONES = {
     return true; // successfully built jqGrid
   }
 };
-
-// dynamic_header js here. why not?!
-
-$(document).ready(function(){
-
-  <%- flash.each do |name, msg| -%>
-    $("#flashes").append('<%= content_tag :div, msg, :id => "flash_#{name}" %>');
-  <%- end -%>
-  <%- if show_title? -%>
-    $("#title_holder").html('<h2><%= h yield(:title)|| "no title" %></h2>');
-  <%- end -%>			
-
-  var flash_message = $("#flash_notice");
-  if (flash_message != null) { 
-    flash_message.fadeTo(4000,0);
-  }
-
-  $('.mydatepicker').datepicker({
-    showButtonPanel: true,
-    dateFormat: "yy-mm-dd"
-  });
-
-  <% unless current_user.nil? then %>
-    BONES.amiana = <%= current_user.admin %>
-    $("#amiana").val(BONES.amiana)
-  <% end %>
-
-  if (BONES.amiana) { $('.admin').show(); }
-
-});
 

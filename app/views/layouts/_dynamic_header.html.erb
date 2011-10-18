@@ -1,8 +1,10 @@
 <div class="span-24 last">
-	<div id="header_container">  <!-- for header backgrounds or borders, etc. in application.css -->
-	  <div id="title_holder"> </div>
-		<div id="flashes"> </div>
-		<input type='hidden' id='amiana'>  <!-- am I an editor? setting it here for jQuery parsing -->
-	</div>
+  <div id="header_container">
+    <div id="title_holder"> <%= content_tag :h1, yield(:title) if show_title? %> </div>
+    <div id="flashes">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
