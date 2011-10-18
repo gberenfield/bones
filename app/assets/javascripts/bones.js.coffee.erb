@@ -1,0 +1,128 @@
+$(window).load ->
+  flash_message = $("#flash_notice")
+  flash_message.fadeTo 4000, 0  if flash_message?
+
+  $('.mydatepicker').datepicker
+    showButtonPanel: true
+    dateFormat: 'yy-mm-dd'
+
+@BONES =
+  lastsel: (if typeof lastsel isnt "undefined" then lastsel else " ")
+  amiana: (if typeof amiana isnt "undefined" then amiana else false)
+  role: (if typeof role isnt "undefined" then role else " ")
+  currentGrid: (if typeof currentGrid isnt "undefined" then currentGrid else " ")
+  userights: ->
+    amiana = (eval($("#amiana").val()))
+    role = $("#marole").val()
+
+  white_space: (str) ->
+    if str?
+      str.replace /^\s*|\s*$/g, ""
+    else
+      ""
+
+  findari: (myarray, seek) ->
+    i = 0
+    for a of myarray
+      di = myarray[parseInt(a)]
+      return i  if di.name is seek
+      i = i + 1
+    -1
+
+  updated_ok: (id) ->
+    $("#header_container").html "<h1>Documents</h1><div id='flash_notice'>Record was successfully updated.</div>"
+    $("#flash_notice").fadeTo 4000, 0.5
+    true
+
+  buildGrid: (grid, columnNames, columnModel, options) ->
+    currentGrid = grid
+    options = options or {}
+    dataurl = options["dataurl"] or "/documents/grid"
+    caption = options["caption"] or "myGrid"
+    role = options["role"] or false
+    sortname = options["sortname"] or "production_date"
+    sortdir = options["sortdir"] or "asc"
+    rowsperpage = options["rowsperpage"] or 20
+    datatopost = options["datatopost"] or {}
+    pager = options["pager"] or "#pager"
+    onselrow = options["onselrow"] or (id) ->
+      if (id) and (id isnt lastsel)
+        jQuery("#thegrid").jqGrid "restoreRow", lastsel  if lastsel
+        lastsel = id
+      orderid = jQuery("#thegrid").getRowData(id).rid
+      jQuery("#thegrid").jqGrid "editRow", id, true, BONES.pickdates, "", "", "", BONES.updated_ok
+
+    $buildbuttons = options["buildbuttons"] or (id) ->
+      $(grid).jqGrid "navButtonAdd", "#pager",
+        caption: "Columns"
+        title: "Reorder Columns"
+        onClickButton: ->
+          $(grid).jqGrid "columnChooser"
+
+      $(grid).jqGrid "navButtonAdd", "#pager",
+        caption: "Toggle"
+        title: "Toggle Search Toolbar"
+        buttonicon: "ui-icon-pin-s"
+        onClickButton: ->
+          $(grid)[0].toggleToolbar()
+
+      $(grid).jqGrid "navButtonAdd", "#pager",
+        caption: "Clear"
+        title: "Clear Search"
+        buttonicon: "ui-icon-refresh"
+        onClickButton: ->
+          $(grid)[0].clearToolbar()
+
+      $(grid).jqGrid "gridResize",
+        minWidth: 350
+        maxWidth: 1000
+        minHeight: 100
+        maxHeight: 1024
+
+      $(grid).jqGrid "filterToolbar"
+
+    colorow = options["colorow"] or null
+    loadcomplete = options["loadcomplete"] or null
+    footerrow = options["footerrow"] or false
+    userdata = options["userdata"] or false
+    userdataonfooter = options["userdataonfooter"] or false
+    try
+      $(grid).jqGrid(
+        sortable: true
+        postData: datatopost
+        url: dataurl
+        autowidth: false
+        datatype: "json"
+        mtype: "post"
+        closeAfterAdd: true
+        reloadAfterSubmit: true
+        colNames: columnNames
+        colModel: columnModel
+        pager: pager
+        rowNum: rowsperpage
+        rowList: [ 20, 30, 50, 100, 200 ]
+        height: "auto"
+        width: 950
+        sortname: sortname
+        sortorder: sortdir
+        viewrecords: true
+        gridview: false
+        gridToolbar: true
+        caption: caption
+        loadComplete: loadcomplete
+        footerrow: footerrow
+        userdata: userdata
+        userDataOnFooter: userdataonfooter
+        onSelectRow: onselrow
+        afterInsertRow: colorow
+        editurl: "/orders/updategrid"
+      ).navGrid pager,
+        edit: false
+        add: false
+        del: false
+        search: false
+
+      $buildbuttons()
+    catch error
+      return false
+    true
