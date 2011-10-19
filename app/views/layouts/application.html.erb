@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-		<title><%= h(yield(:title) || "BONES") %></title>
+    <title><%= h(yield(:title) || "BONES") %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag params[:controller] unless params[:controller] == 'devise/sessions' %>
@@ -10,14 +10,14 @@
     <%= yield(:head) %>
   </head>
   <body>
-		<div class="container">
+    <div class="container">
       <%= render 'layouts/dynamic_header' unless @hide_dynamic %>
-			&nbsp;
-			<div class="span-24 last">
-				<div id="main_container">
-					<%= yield %>
-				</div>
-			</div>
-		</div>
-	</body>
+      &nbsp;
+      <div class="span-24 last">
+        <div id="main_container">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
